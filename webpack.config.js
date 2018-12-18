@@ -19,6 +19,12 @@ module.exports = {
           'sass-loader?indentedSyntax',
         ],
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ]
+      }
     ],
   },
   devServer: {
