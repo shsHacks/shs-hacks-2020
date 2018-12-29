@@ -9,6 +9,8 @@
 $primary-color: #1F5D39
 $secondary-color: #C99A2C
 
+$menu-height: 90px
+
 body
   font-family: Nunito, sans-serif
   margin: 0
@@ -28,22 +30,32 @@ body
   text-align: center
   line-height: 225%
   letter-spacing: .05em
-  margin-top: 25px
   text-decoration: none
-  transition: background-color .2s, color .2s
+  transition: background-color .2s, color .2s, transform .2s
+  display: block
+  box-sizing: border-box
 
   &:hover
     background-color: $primary-color
     color: white
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.25)
+    transform: scale(1.1)
 
 .menu
-  height: 100px
+  $menu-margin: 75px
+  $button-width: 140px
+  height: $menu-height
   background-color: white
   display: flex
   position: relative
   align-items: center
-  padding: 0 100px
+  padding: 0 $menu-margin
   justify-content: space-around
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: $primary-color 2px solid
+  overflow: hidden
+  transition: box-shadow .3s
 
   .menu-item
     // line-height: 60px
@@ -53,6 +65,8 @@ body
     font-size: 1.4em
     text-decoration: none
     transition: color .2s
+    margin: 0 10px
+    transform: font-size .3s
     // flex: 1
     // text-align: center
     // border-radius: 50px
@@ -60,16 +74,77 @@ body
     .line
       height: 4px
       width: 0px
-      background-color: $primary-color
+      background-color: $secondary-color
       margin: auto
       transition: width .2s
       border-radius: 5px
+      &.fake // the fake line is for vertically aligning the text to the center properly
+        visibility: hidden
 
     &:hover
-      color: $primary-color
+      color: $secondary-color
 
       .line
         width: 100%
+
+  .info
+    display: flex
+    align-items: center
+    position: absolute
+    left: $menu-margin
+    transform: translateX(-$menu-margin - 300px)
+    transition: transform .3s
+
+    .logo
+      display: inline-block
+      height: 60px
+      width: 60px
+      margin-right: 10px
+
+    .title
+      font-weight: bold
+      font-size: 2em
+      letter-spacing: 1px
+      color: rgba(0, 0, 0, .8)
+
+  .register-button
+    font-size: 1em
+    width: $button-width
+
+  // need to use a wrapper for button animations because .register-button is already using the transform property to scale on hover
+  .button-wrapper
+    position: absolute
+    right: $menu-margin
+    transform: translateX($button-width + $menu-margin + 10px)
+    transition: transform .3s
+
+  .filler
+    transition: flex .3s
+  
+  .button-filler
+    width: 0px
+    transition: width .3s, margin-left .3s
+
+  &.sticky
+    position: fixed
+    top: 0
+    +shadow-alt
+
+    .filler
+      flex: 1
+    
+    .button-filler
+      width: $button-width
+      margin-left: 15px
+
+    .menu-item
+      font-size: 1.2em
+
+    .info
+      transform: translateX(0)
+
+    .button-wrapper
+      transform: translateX(0)
 
 
 #background
@@ -90,7 +165,7 @@ body
   transition: height .6s
 
   &.shift-up
-    height: calc(100% - 100px)
+    height: calc(100% - #{$menu-height})
 
   #main-tab
     $width: 600px
@@ -130,12 +205,18 @@ body
 
       &.large
         font-size: 1.4em
-
     
-#about
-  height: 100%
+    .register-button
+      margin-top: 25px
+
+
+
+#content
   width: 100%
   background-color: white
-  position: relative
-  margin: auto
-  // border-radius: 20px
+  
+  #about
+    height: 100%
+    // position: relative
+    // margin: auto
+    // border-radius: 20px
