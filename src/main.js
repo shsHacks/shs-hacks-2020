@@ -9,6 +9,7 @@ setTimeout(() => {
 
 window.addEventListener('scroll', setMenuStickiness);
 
+
 function setMenuStickiness() {
   const menuHeight = $menu.offsetHeight;
 

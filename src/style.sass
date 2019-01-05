@@ -6,8 +6,11 @@
 =shadow-alt
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.25)
 
-$primary-color: #1F5D39
-$secondary-color: #C99A2C
+// $primary-color: #1F5D39
+// $secondary-color: #C99A2C
+
+$primary-color: #275d38
+$secondary-color: #c99700
 
 $menu-height: 90px
 
@@ -41,6 +44,10 @@ body
     box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.25)
     transform: scale(1.1)
 
+// Menu container is used to fill the space left when the menu becomes sticky (position: fixed)
+.menu-container
+  height: $menu-height
+
 .menu
   $menu-margin: 75px
   $button-width: 140px
@@ -53,7 +60,7 @@ body
   justify-content: space-around
   width: 100%;
   box-sizing: border-box;
-  border-bottom: $primary-color 2px solid
+  // border-bottom: $primary-color 2px solid
   overflow: hidden
   transition: box-shadow .3s
 
@@ -210,13 +217,48 @@ body
       margin-top: 25px
 
 
-
 #content
   width: 100%
   background-color: white
   
   #about
-    height: 100%
+    // height: 100%
+    overflow: auto
+    padding-top: $menu-height
     // position: relative
-    // margin: auto
+    margin: auto
+    max-width: 1000px
     // border-radius: 20px
+    // background-color: lighten($primary-color, 60%)
+    display: flex
+
+    .title
+      font-size: 2.25em
+      font-weight: bold
+      // margin-top: 30px
+      margin-left: 10px
+      +shadow
+      text-align: center
+      width: 225px
+      line-height: 75px
+      display: inline-block
+      // padding: 15px 40px
+      border-radius: 10px
+      border-bottom: $primary-color 4px solid
+      // box-sizing: border-box
+      margin: 0 25px
+      color: rgba(0, 0, 0, .8)
+
+    .separator
+      // height: 100%
+      width: 3px
+      background-color: $primary-color
+      margin: 0 15px
+      // flex-basis: 20px
+      border-radius: 5px
+
+    .text
+      font-size: 1.25em
+      margin: 0 15px
+      flex: 1
+      
