@@ -85,6 +85,9 @@ body
   left: 0
   z-index: -1
 
+#app
+  height: 100%
+
 #content
   width: 100%
   background-color: white
