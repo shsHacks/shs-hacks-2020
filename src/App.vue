@@ -7,10 +7,7 @@
 
     <div id="content">
       <about :scroll="contentScroll"/>
-      <about :scroll="contentScroll"/>
-      <about :scroll="contentScroll"/>
-      <about :scroll="contentScroll"/>
-      <about :scroll="contentScroll"/>
+      <location :scroll="contentScroll"/>
 
       <div style="height: 1000px"/>
     </div>
@@ -19,8 +16,9 @@
 
 <script>
 import Top from 'src/sections/Top.vue';
-import About from 'src/sections/About.vue';
 import Menu from 'src/components/Menu.vue';
+import About from 'src/sections/About.vue';
+import Location from 'src/sections/Location.vue';
 
 import { eventBus } from 'src/js/event-bus.js';
 
@@ -62,8 +60,9 @@ export default {
   },
   components: {
     Top,
+    MyMenu: Menu, // menu is a reserved word
     About,
-    MyMenu: Menu // menu is a reserved word
+    Location,
   }
 }
 </script>
@@ -84,9 +83,6 @@ body
   top: 0
   left: 0
   z-index: -1
-
-#app
-  height: 100%
 
 #content
   width: 100%

@@ -34,12 +34,12 @@ export default {
 
 .top
   width: 100%
-  height: 100%
+  height: 100vh
   position: relative
   transition: height .6s
 
   &.shift-up
-    height: calc(100% - #{$menu-height})
+    height: calc(100vh - #{$menu-height})
 
   .main-tab
     $width: 600px
