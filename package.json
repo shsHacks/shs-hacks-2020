@@ -4,13 +4,13 @@
   "description": "The website for shsHacks, a high school hackathon held at Adlai E. Stevenson High School in Lincolnshire, IL",
   "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "del-cli dist && webpack-dev-server --open",
     "build": "del-cli dist && webpack --progress --hide-modules --mode=production"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.0.1",
     "del-cli": "^1.1.0",
     "file-loader": "^2.0.0",
@@ -18,11 +18,14 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+    "vue-loader": "^15.5.0",
+    "vue-template-compiler": "^2.5.21",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "npm": "^6.5.0"
+    "npm": "^6.5.0",
+    "vue": "^2.5.21"
   }
 }

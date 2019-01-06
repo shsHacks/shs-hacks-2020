@@ -2,8 +2,11 @@ const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/main.js',
   output: {
     filename: 'bundle.js',
@@ -14,7 +17,8 @@ module.exports = {
       {
         test: /\.sass$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          // vue-style-loader is necessary for hot reload in development mode
+          process.env.NODE_ENV !== 'production' ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader?indentedSyntax',
         ],
@@ -24,11 +28,21 @@ module.exports = {
         use: [
           'file-loader',
         ]
-      }
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
     ],
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+      'src': path.resolve(__dirname, 'src'), // allows you to reference src directly from anywhere (e.g. import {} from 'src/js/file')
+    }
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -38,5 +52,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+    new CopyWebpackPlugin([
+      { from: './src/assets/', to: 'assets/'}
+    ]),
+    new VueLoaderPlugin(),
   ]
 }
