@@ -38,6 +38,10 @@ export default {
   },
   computed: {
     titleTranslateY() {
+      if (this.isMobileDevice) { // don't animate on mobile devices (too stuttery)
+        return 0;
+      }
+
       if (this.scroll <= this.top) {
         return 0;
       } else if (this.scroll <= this.top + (this.height - this.titleHeight)) {
@@ -50,9 +54,9 @@ export default {
       const style = {
         transform: `translateY(${this.titleTranslateY}px)`,
       }
-      if (this.isMobileDevice) {
-        style.transition = 'transform .1s';
-      }
+      // if (this.isMobileDevice) {
+      //   style.transition = 'transform .1s';
+      // }
       return style;
     }
   },

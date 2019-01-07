@@ -1,0 +1,23 @@
+[
+  {
+    "date": "Saturday, March 2",
+    "events": [
+      { "time": "11:00AM – 12:30PM", "text": "Arrival and Check-in" },
+      { "time": "12:45PM – 1:30PM", "text": "Opening Ceremony" },
+      { "time": "1:30PM", "text": "Hacking Commences" },
+      { "time": "2:00PM – 6:00PM", "text": "Mini Presentations" },
+      { "time": "6:00PM – 8:00PM", "text": "Dinner" }
+    ]
+  },
+  {
+    "date": "Sunday, March 3",
+    "events": [
+      { "time": "12:00AM – 1:00AM", "text": "Fun Activity" },
+      { "time": "1:00PM – 2:00PM", "text": "Midnight Snack" },
+      { "time": "7:00PM – 8:00PM", "text": "Breakfast" },
+      { "time": "11:00AM", "text": "Submissions" },
+      { "time": "11:00AM – 12:30PM", "text": "Presentations" },
+      { "time": "12:30PM - 1:00PM", "text": "Awards" }
+    ]
+  }
+]

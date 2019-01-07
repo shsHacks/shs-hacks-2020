@@ -23,17 +23,7 @@ import Location from 'src/sections/Location.vue';
 import Schedule from 'src/sections/Schedule.vue';
 
 import { eventBus } from 'src/js/event-bus.js';
-
-const colors = {
-  red: '#BA0C2F',
-  orange: '#FE5000',
-  midGreen: '#48A23F',
-  highlightGreen: '#D0DF00',
-  darkBlue: '#002F6C',
-  blue: '#005587',
-  teal: '#006F62',
-  brightBlue: '#00A3E0',
-}
+import colors from 'src/data/colors.json';
 
 export default {
   data() {
@@ -43,7 +33,7 @@ export default {
       menuHeight: 0,
       primaryColor: '#275d38',
       secondaryColor: '#c99700',
-      colors
+      colors,
     }
   },
   created() {

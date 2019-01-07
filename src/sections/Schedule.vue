@@ -8,7 +8,7 @@
           :class="{ selected: index === selectedDay }"
           :style="getTabStyle(index)"
           @click="selectedDay = index">
-          {{ day.date.toLocaleDateString('en-US', {weekday: 'long', month: 'long', day: 'numeric'}) }}
+          {{ day.date }}
         </div>
       </div>
 
@@ -32,30 +32,7 @@
 
 <script>
 import SlidingTitle from 'src/components/SlidingTitle.vue';
-
-const schedule = [
-  {
-    date: new Date('3/2/2019'),
-    events: [
-      { time: '11:00AM – 12:30PM', text: 'Arrival and Check-in' },
-      { time: '12:45PM – 1:30PM', text: 'Opening Ceremony' },
-      { time: '1:30PM', text: 'Hacking Commences' },
-      { time: '2:00PM – 6:00PM', text: 'Mini Presentations' },
-      { time: '6:00PM – 8:00PM', text: 'Dinner' },
-    ]
-  },
-  {
-    date: new Date('3/3/2019'),
-    events: [
-      { time: '12:00AM – 1:00AM', text: 'Fun Activity' },
-      { time: '1:00PM – 2:00PM', text: 'Midnight Snack' },
-      { time: '7:00PM – 8:00PM', text: 'Breakfast' },
-      { time: '11:00AM', text: 'Submissions' },
-      { time: '11:00AM – 12:30PM', text: 'Presentations' },
-      { time: '12:30PM - 1:00PM', text: 'Awards' },
-    ]
-  }
-];
+import schedule from 'src/data/schedule.json';
 
 export default {
   props: {
@@ -114,7 +91,7 @@ export default {
 
     .tab
       display: inline-block
-      +shadow
+      +shadow-alt
       padding: 15px
       border-top-right-radius: 15px
       border-top-left-radius: 15px
@@ -131,11 +108,14 @@ export default {
       &.selected
         color: var(--color)
         cursor: default
+      
+      &:hover
+        color: var(--color)
 
   .card
     margin-left: 10px // must equal the padding-left of .tabs
     width: 100%
-    +shadow
+    +shadow-alt
     z-index: 10
     position: relative
     background-color: white
