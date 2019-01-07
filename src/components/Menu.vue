@@ -7,12 +7,12 @@
       </div>
       <div class="filler"></div>
 
-      <a class="menu-item" href=""><div class="line fake"></div> About Us <div class="line"></div></a>
-      <a class="menu-item" href=""><div class="line fake"></div> Location <div class="line"></div></a>
-      <a class="menu-item" href=""><div class="line fake"></div> Schedule <div class="line"></div></a>
-      <a class="menu-item" href=""><div class="line fake"></div> FAQ <div class="line"></div></a>
-      <a class="menu-item" href=""><div class="line fake"></div> Sponsors <div class="line"></div></a>
-      <a class="menu-item" href=""><div class="line fake"></div> Contact Us <div class="line"></div></a>
+      <div class="menu-item" @click="$emit('scroll', '#about')"><div class="line fake"></div> About Us <div class="line"></div></div>
+      <div class="menu-item" @click="$emit('scroll', '#location')"><div class="line fake"></div> Location <div class="line"></div></div>
+      <div class="menu-item" @click="$emit('scroll', '#schedule')"><div class="line fake"></div> Schedule <div class="line"></div></div>
+      <div class="menu-item" @click="$emit('scroll', '#faq')"><div class="line fake"></div> FAQ <div class="line"></div></div>
+      <div class="menu-item" @click="$emit('scroll', )"><div class="line fake"></div> Sponsors <div class="line"></div></div>
+      <div class="menu-item" @click="$emit('scroll', )"><div class="line fake"></div> Contact Us <div class="line"></div></div>
       
       <div class="button-filler"></div>
       <div class="button-wrapper">
@@ -67,6 +67,7 @@ export default {
     transition: color .2s
     margin: 0 10px
     transform: font-size .3s
+    cursor: pointer
     // flex: 1
     // text-align: center
     // border-radius: 50px

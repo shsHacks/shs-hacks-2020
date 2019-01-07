@@ -3,13 +3,13 @@
     <div id="background"></div>
 
     <top ref="top"/>
-    <my-menu :sticky="menuSticky" ref="menu"/>
+    <my-menu :sticky="menuSticky" @scroll="scrollTo($event)" ref="menu"/>
 
     <div id="content">
-      <about :scroll="contentScroll" :color="primaryColor"/>
-      <location :scroll="contentScroll" :color="colors.blue"/>
-      <schedule :scroll="contentScroll" :color="colors.red"/>
-      <faq :scroll="contentScroll" :color="secondaryColor"/>
+      <about id="about" :scroll="contentScroll" :color="primaryColor"/>
+      <location id="location" :scroll="contentScroll" :color="colors.blue"/>
+      <schedule id="schedule" :scroll="contentScroll" :color="colors.red"/>
+      <faq id="faq" :scroll="contentScroll" :color="secondaryColor"/>
 
       <div style="height: 3000px"/>
     </div>
@@ -71,6 +71,16 @@ export default {
       this.menuHeight = this.$refs['menu'].$el.offsetHeight;
       this.topHeight = this.$refs['top'].$el.offsetHeight;
     },
+    scrollTo(id) {
+      // scroll to element (can't use browser's natural behavior because the fixed menu obstructs the top part of the selected section)
+      if (id) {
+        const element = this.$el.querySelector(id);
+        if (element) {
+          const top = element.offsetTop;
+          window.scroll(0, top - this.menuHeight - 25);
+        }
+      }
+    }
   },
   components: {
     Top,
