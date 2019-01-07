@@ -16,17 +16,20 @@
       
       <div class="button-filler"></div>
       <div class="button-wrapper">
-        <a class="register-button" href="">Register Now</a>
+        <register-button class="register"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import RegisterButton from 'src/components/RegisterButton.vue';
+
 export default {
   props: {
     sticky: { type: Boolean, default: false },
-  }
+  },
+  components: { RegisterButton },
 }
 </script>
 
@@ -52,7 +55,7 @@ export default {
   // border-bottom: $primary-color 2px solid
   overflow: hidden
   transition: box-shadow .3s
-  z-index: 1
+  z-index: 100
 
   .menu-item
     // line-height: 60px
@@ -71,7 +74,7 @@ export default {
     .line
       height: 4px
       width: 0px
-      background-color: $secondary-color
+      background-color: var(--secondary-color)
       margin: auto
       transition: width .2s
       border-radius: 5px
@@ -79,7 +82,7 @@ export default {
         visibility: hidden
 
     &:hover
-      color: $secondary-color
+      color: var(--secondary-color)
 
       .line
         width: 100%
@@ -104,7 +107,7 @@ export default {
       letter-spacing: 1px
       color: rgba(0, 0, 0, .8)
 
-  .register-button
+  .register
     font-size: 1em
     width: $button-width
 

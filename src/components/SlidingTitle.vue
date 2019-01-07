@@ -1,5 +1,5 @@
 <template>
-  <div class="sliding-title">
+  <div class="sliding-title" :style="{ '--color': color }">
     <div>
       <div class="title" :style="titleStyle">{{ title }}</div>
     </div>
@@ -19,6 +19,7 @@ export default {
   props: {
     scroll: { type: Number, required: true },
     title: { type: String, required: true },
+    color: { type: String, required: true },
   },
   data() {
     return {
@@ -81,7 +82,7 @@ export default {
   margin-top: 50px
 
   .title
-    font-size: 2.25em
+    font-size: 2em
     font-weight: bold
     // margin-top: 30px
     // margin-left: 10px
@@ -92,7 +93,7 @@ export default {
     display: inline-block
     // padding: 15px 40px
     border-radius: 10px
-    border-bottom: $primary-color 4px solid
+    border-bottom: var(--color) 4px solid
     // box-sizing: border-box
     margin: 0 25px
     // margin-top: 10px
@@ -101,7 +102,7 @@ export default {
   .separator
     // height: 100%
     width: 3px
-    background-color: $primary-color
+    background-color: var(--color)
     margin: 0 15px
     // flex-basis: 20px
     border-radius: 5px

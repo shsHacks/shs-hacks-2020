@@ -1,15 +1,16 @@
 <template>
-  <div id="app">
+  <div id="app" :style="appStyle">
     <div id="background"></div>
 
     <top ref="top"/>
     <my-menu :sticky="menuSticky" ref="menu"/>
 
     <div id="content">
-      <about :scroll="contentScroll"/>
-      <location :scroll="contentScroll"/>
+      <about :scroll="contentScroll" :color="primaryColor"/>
+      <location :scroll="contentScroll" :color="primaryColor"/>
+      <schedule :scroll="contentScroll" :color="secondaryColor"/>
 
-      <div style="height: 1000px"/>
+      <div style="height: 3000px"/>
     </div>
   </div>
 </template>
@@ -19,8 +20,20 @@ import Top from 'src/sections/Top.vue';
 import Menu from 'src/components/Menu.vue';
 import About from 'src/sections/About.vue';
 import Location from 'src/sections/Location.vue';
+import Schedule from 'src/sections/Schedule.vue';
 
 import { eventBus } from 'src/js/event-bus.js';
+
+const colors = {
+  red: '#BA0C2F',
+  orange: '#FE5000',
+  midGreen: '#48A23F',
+  highlightGreen: '#D0DF00',
+  darkBlue: '#002F6C',
+  blue: '#005587',
+  teal: '#006F62',
+  brightBlue: '#00A3E0',
+}
 
 export default {
   data() {
@@ -28,6 +41,9 @@ export default {
       scroll: 0,
       topHeight: 0,
       menuHeight: 0,
+      primaryColor: '#275d38',
+      secondaryColor: '#c99700',
+      colors
     }
   },
   created() {
@@ -50,6 +66,12 @@ export default {
     },
     contentScroll() {
       return this.scroll + this.menuHeight + 50;
+    },
+    appStyle() {
+      return {
+        '--primary-color': this.primaryColor,
+        '--secondary-color': this.secondaryColor,
+      }
     }
   },
   methods: {
@@ -63,6 +85,7 @@ export default {
     MyMenu: Menu, // menu is a reserved word
     About,
     Location,
+    Schedule
   }
 }
 </script>
@@ -71,8 +94,10 @@ export default {
 @import 'src/style.sass'
 
 body
-  font-family: Nunito, sans-serif
   margin: 0
+
+#app
+  font-family: Nunito, sans-serif
 
 #background
   width: 100%

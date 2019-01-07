@@ -5,13 +5,14 @@
       <div class="title">shsHacks</div>
       <div class="text">March 2nd – 3rd, 2019</div>
       <div class="text large">Adlai E. Stevenson High School</div>
-      <a class="register-button" href="">Register Now</a>
+      <register-button class="register"/>
     </div>
   </div>
 </template>
 
 <script>
 import { eventBus } from 'src/js/event-bus.js';
+import RegisterButton from 'src/components/RegisterButton.vue';
 
 export default {
   data() {
@@ -25,7 +26,8 @@ export default {
     // when the height of an element changes, need to announce that to all other elements using the event bus
     // 300 (above timeout) + 600 (animation duration) + 100 (leeway) = 1000
     setTimeout(() => eventBus.$emit('height-change'), 1000);
-  }
+  },
+  components: { RegisterButton },
 }
 </script>
 
@@ -55,7 +57,7 @@ export default {
     display: flex
     flex-direction: column 
     align-items: center
-    border-bottom: 5px solid $primary-color 
+    border-bottom: 5px solid var(--primary-color) 
 
     .logo
       $scale: 96px / 75px
@@ -80,7 +82,7 @@ export default {
       &.large
         font-size: 1.4em
     
-    .register-button
+    .register
       margin-top: 25px
 
 </style>
