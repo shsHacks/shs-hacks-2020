@@ -57,7 +57,7 @@ export default {
       const zIndex = (index === this.selectedDay) ? 11 : 10 - Math.abs(this.selectedDay - index);
 
       return {
-        left: `${-10 * index}px`,
+        left: `${-20 * index}px`,
         zIndex, 
       };
     },

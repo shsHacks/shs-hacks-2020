@@ -7,8 +7,9 @@
 
     <div id="content">
       <about :scroll="contentScroll" :color="primaryColor"/>
-      <location :scroll="contentScroll" :color="primaryColor"/>
-      <schedule :scroll="contentScroll" :color="secondaryColor"/>
+      <location :scroll="contentScroll" :color="colors.blue"/>
+      <schedule :scroll="contentScroll" :color="colors.red"/>
+      <faq :scroll="contentScroll" :color="secondaryColor"/>
 
       <div style="height: 3000px"/>
     </div>
@@ -21,6 +22,7 @@ import Menu from 'src/components/Menu.vue';
 import About from 'src/sections/About.vue';
 import Location from 'src/sections/Location.vue';
 import Schedule from 'src/sections/Schedule.vue';
+import Faq from 'src/sections/Faq.vue';
 
 import { eventBus } from 'src/js/event-bus.js';
 import colors from 'src/data/colors.json';
@@ -75,7 +77,8 @@ export default {
     MyMenu: Menu, // menu is a reserved word
     About,
     Location,
-    Schedule
+    Schedule,
+    Faq,
   }
 }
 </script>
