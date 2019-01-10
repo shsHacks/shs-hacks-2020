@@ -4,8 +4,8 @@
     <!-- <div class="card"> -->
       <form class="card" action="https://formspree.io/contact@shshacks.io" method="POST">
         <div class="title">Contact Us</div>
-        <textarea class="message" type="text" name="message" placeholder="Message"/>
-        <input class="email" type="email" name="_replyto">
+        <textarea class="message field" type="text" name="message" placeholder="Message"/>
+        <input class="email field" type="email" name="_replyto" placeholder="Your Email (so we can reply back)">
         <input class="submit" type="submit" value="Send">
       </form>
     <!-- </div> -->
@@ -27,13 +27,8 @@ export default {
   background-color: var(--primary-color)
   margin-top: 250px
 
-  // .text
-  //   color: white
-  //   font-size: 3em
-  //   font-weight: bold
-  //   text-align: center
-
   .card
+    $card-height: 310px
     +shadow-alt
     background-color: white
     width: 1000px
@@ -41,8 +36,8 @@ export default {
     display: flex
     flex-direction: column
     border-radius: 20px
-    height: 300px
-    transform: translateY(-150px)
+    height: $card-height
+    transform: translateY(-$card-height/2)
 
     .title
       color: rgba(0, 0, 0, 0.8)
@@ -50,20 +45,51 @@ export default {
       font-weight: bold
       margin-left: 25px
       margin-top: 10px
-
-    .message
-      resize: none
-      height: 100px
-      margin: 25px 25px
-      border-radius: 10px
+    
+    .field
+      border: #dadce0 1px solid
+      padding: 10px
+      outline: none
+      transition: border-color .2s, border-width .2s, padding .2s
+      box-sizing: border-box
       font-family: "Nunito", sans-serif
       font-size: 1.2em
+      border-radius: 10px
+      margin: 10px 25px
+      &:focus
+        border-color: var(--primary-color)
+        border-width: 3px
+        padding: 8px
 
-    .email
-      margin: 0 25px
+      &.message
+        resize: none
+        height: 100px
 
     .submit
-      width: 100px
+      align-self: flex-end
+      margin-right: 25px
+      font-family: "Nunito", sans-serif
+      outline: none
+      cursor: pointer
+      font-size: 1.2em
+      color: var(--primary-color)
+      font-weight: bold
+      border: 2px solid var(--primary-color)
+      border-radius: 50px
+      width: 150px
+      text-align: center
+      line-height: 200%
+      letter-spacing: .05em
+      text-decoration: none
+      transition: background-color .2s, color .2s, transform .2s
+      display: block
+      box-sizing: border-box
+
+      &:hover, &:focus
+        background-color: var(--primary-color)
+        color: white
+        transform: scale(1.1)
+        +shadow-alt
 
 </style>
 
