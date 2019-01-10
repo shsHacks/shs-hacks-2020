@@ -10,8 +10,8 @@
       <location id="location" :scroll="contentScroll" :color="colors.blue"/>
       <schedule id="schedule" :scroll="contentScroll" :color="colors.red"/>
       <faq id="faq" :scroll="contentScroll" :color="secondaryColor"/>
-
-      <div style="height: 3000px"/>
+      <sponsors/>
+      <contact/>
     </div>
   </div>
 </template>
@@ -23,6 +23,8 @@ import About from 'src/sections/About.vue';
 import Location from 'src/sections/Location.vue';
 import Schedule from 'src/sections/Schedule.vue';
 import Faq from 'src/sections/Faq.vue';
+import Sponsors from 'src/sections/Sponsors.vue';
+import Contact from 'src/sections/Contact.vue';
 
 import { eventBus } from 'src/js/event-bus.js';
 import colors from 'src/data/colors.json';
@@ -49,6 +51,7 @@ export default {
     // when the height of something changes, get the new values
     eventBus.$on('height-change', () => this.setHeights());
 
+    // TODO: Debounce the following
     // some heights may change when the window is resized (other components depend on the accuracy of height-change)
     window.addEventListener('resize', () => eventBus.$emit('height-change'));
   },
@@ -89,6 +92,8 @@ export default {
     Location,
     Schedule,
     Faq,
+    Sponsors,
+    Contact,
   }
 }
 </script>
