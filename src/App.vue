@@ -123,7 +123,7 @@ body
 #content
   width: 100%
   background-color: white
-  overflow: auto
-  padding-top: 25px;
+  overflow: hidden
+  padding-top: 25px
 
 </style>

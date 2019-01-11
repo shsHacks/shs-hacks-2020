@@ -8,12 +8,22 @@
       </div>
       <div class="filler"></div>
 
-      <div class="menu-item" @click="$emit('scroll', '#about')"><div class="line fake"></div> About Us <div class="line"></div></div>
-      <div class="menu-item" @click="$emit('scroll', '#location')"><div class="line fake"></div> Location <div class="line"></div></div>
-      <div class="menu-item" @click="$emit('scroll', '#schedule')"><div class="line fake"></div> Schedule <div class="line"></div></div>
-      <div class="menu-item" @click="$emit('scroll', '#faq')"><div class="line fake"></div> FAQ <div class="line"></div></div>
+      <div class="menu-item" @click="$emit('scroll', '#about')" v-hammer:tap="() => $emit('scroll', '#about')">
+        <div class="line fake"></div> About Us <div class="line"></div>
+      </div>
+      <div class="menu-item" @click="$emit('scroll', '#location')" v-hammer:tap="() => $emit('scroll', '#location')">
+        <div class="line fake"></div> Location <div class="line"></div>
+      </div>
+      <div class="menu-item" @click="$emit('scroll', '#schedule')" v-hammer:tap="() => $emit('scroll', '#schedule')">
+        <div class="line fake"></div> Schedule <div class="line"></div>
+      </div>
+      <div class="menu-item" @click="$emit('scroll', '#faq')" v-hammer:tap="() => $emit('scroll', '#faq')">
+        <div class="line fake"></div> FAQ <div class="line"></div>
+      </div>
       <!-- <div class="menu-item" @click="$emit('scroll', )"><div class="line fake"></div> Sponsors <div class="line"></div></div> -->
-      <div class="menu-item" @click="$emit('scroll', '#contact')"><div class="line fake"></div> Contact Us <div class="line"></div></div>
+      <div class="menu-item" @click="$emit('scroll', '#contact')" v-hammer:tap="() => $emit('scroll', '#contact')">
+        <div class="line fake"></div> Contact Us <div class="line"></div>
+      </div>
       
       <div class="button-filler"></div>
       <div class="button-wrapper">
