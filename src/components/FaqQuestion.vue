@@ -69,6 +69,7 @@ export default {
     padding-bottom: 7.5px
     font-size: 1.1em
     transition: transform .3s
+    white-space: pre-line
 
   &.expanded
     background-color: white
