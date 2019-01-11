@@ -31,13 +31,14 @@ export default {
     $card-height: 310px
     +shadow-alt
     background-color: white
-    width: 1000px
+    max-width: 1000px
     margin: auto
     display: flex
     flex-direction: column
     border-radius: 20px
     height: $card-height
     transform: translateY(-$card-height/2)
+    width: 60%
 
     .title
       color: rgba(0, 0, 0, 0.8)
@@ -73,6 +74,7 @@ export default {
       cursor: pointer
       font-size: 1.2em
       color: var(--primary-color)
+      background-color: white
       font-weight: bold
       border: 2px solid var(--primary-color)
       border-radius: 50px
@@ -84,6 +86,9 @@ export default {
       transition: background-color .2s, color .2s, transform .2s
       display: block
       box-sizing: border-box
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
 
       &:hover, &:focus
         background-color: var(--primary-color)

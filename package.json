@@ -27,6 +27,7 @@
   "dependencies": {
     "@google/maps": "^0.5.5",
     "npm": "^6.5.0",
+    "smoothscroll-polyfill": "^0.4.3",
     "vue": "^2.5.21"
   }
 }

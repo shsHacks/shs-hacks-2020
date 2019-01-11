@@ -84,6 +84,7 @@ export default {
   // background-color: lighten($primary-color, 60%)
   display: flex
   margin-top: 50px
+  // width: 95%
 
   .title
     font-size: 2em

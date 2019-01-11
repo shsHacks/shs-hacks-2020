@@ -1,8 +1,9 @@
 <template>
   <div class="top" :class="{ 'shift-up': shiftUp }">
     <div class="main-tab">
-      <div class="logo"></div>
-      <div class="title">shsHacks</div>
+      <!-- <div class="logo"></div> -->
+      <img class="logo" src="/assets/logo.png">
+      <!-- <div class="title">shsHacks</div> -->
       <div class="text">March 2nd – 3rd, 2019</div>
       <div class="text large">Adlai E. Stevenson High School</div>
       <register-button class="register"/>
@@ -60,11 +61,12 @@ export default {
     border-bottom: 5px solid var(--primary-color) 
 
     .logo
-      $scale: 96px / 75px
-      $width: 85px
-      width: $width
-      height: $width * $scale
-      margin-top: 15px
+      // $scale: 96px / 75px
+      // $width: 85px
+      // width: $width
+      // height: $width * $scale
+      // margin-top: 15px
+      height: 240px
       
     .title
       font-size: 5em
@@ -83,6 +85,6 @@ export default {
         font-size: 1.4em
     
     .register
-      margin-top: 25px
+      margin-top: 15px
 
 </style>

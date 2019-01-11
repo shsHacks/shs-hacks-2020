@@ -11,7 +11,7 @@
       <schedule id="schedule" :scroll="contentScroll" :color="colors.red"/>
       <faq id="faq" :scroll="contentScroll" :color="secondaryColor"/>
       <sponsors/>
-      <contact/>
+      <contact id="contact"/>
     </div>
   </div>
 </template>
@@ -80,7 +80,10 @@ export default {
         const element = this.$el.querySelector(id);
         if (element) {
           const top = element.offsetTop;
-          window.scroll(0, top - this.menuHeight - 25);
+          window.scroll({
+            top: top - this.menuHeight - 25,
+            behavior: 'smooth',
+          });
         }
       }
     }

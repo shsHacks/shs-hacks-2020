@@ -2,8 +2,9 @@
   <div class="menu-container">
     <div class="menu" :class="{ sticky }">
       <div class="info">
-        <div class="logo"></div>
-        <div class="title">shsHacks</div>
+        <img class="logo" src="assets/logo-no-text.png">
+        <!-- <div class="logo"></div> -->
+        <!-- <div class="title">shsHacks</div> -->
       </div>
       <div class="filler"></div>
 
@@ -11,8 +12,8 @@
       <div class="menu-item" @click="$emit('scroll', '#location')"><div class="line fake"></div> Location <div class="line"></div></div>
       <div class="menu-item" @click="$emit('scroll', '#schedule')"><div class="line fake"></div> Schedule <div class="line"></div></div>
       <div class="menu-item" @click="$emit('scroll', '#faq')"><div class="line fake"></div> FAQ <div class="line"></div></div>
-      <div class="menu-item" @click="$emit('scroll', )"><div class="line fake"></div> Sponsors <div class="line"></div></div>
-      <div class="menu-item" @click="$emit('scroll', )"><div class="line fake"></div> Contact Us <div class="line"></div></div>
+      <!-- <div class="menu-item" @click="$emit('scroll', )"><div class="line fake"></div> Sponsors <div class="line"></div></div> -->
+      <div class="menu-item" @click="$emit('scroll', '#contact')"><div class="line fake"></div> Contact Us <div class="line"></div></div>
       
       <div class="button-filler"></div>
       <div class="button-wrapper">
@@ -65,7 +66,7 @@ export default {
     font-size: 1.4em
     text-decoration: none
     transition: color .2s
-    margin: 0 10px
+    margin: 0 15px
     transform: font-size .3s
     cursor: pointer
     // flex: 1
@@ -98,8 +99,9 @@ export default {
 
     .logo
       display: inline-block
-      height: 60px
-      width: 60px
+      // height: 60px
+      // width: 60px
+      height: $menu-height / 5 * 3
       margin-right: 10px
 
     .title
