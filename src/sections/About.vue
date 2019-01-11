@@ -1,8 +1,8 @@
 <template>
   <sliding-title title="About Us" :scroll="scroll" :color="color">
     <div class="text">
-      <p><span class="highlight">shsHacks</span> is a first time high school hackathon being held at Adlai E. Stevenson High School in Lincolnshire, Illinois on <span class="highlight">March 2-3</span>, 2019.</p>
-      <p>Over <span class="highlight">200</span> high school students will come together and participate in the "marathon" to bring their ideas into reality within the span of <span class="highlight">24 hours</span></p>
+      <p>shsHacks is Stevenson High School’s first ever Hackathon, a collaborative, <span class="highlight">24-hour</span> coding marathon that will take place March 2-3. Get ready to make the best game, app, or website of your life so far in just one weekend. Never coded before? Just started? New to hands-on project development? No problem! shsHacks is any and all students who are interested in inventing, designing, and bringing their creations to life, from beginners to seasoned developers.</p>
+      <p>shsHacks is student-run, student-organized, and completely <span class="highlight">free</span> for all participants. For more info, check out the FAQs or contact us below.</p>
     </div>
   </sliding-title>
 </template>
