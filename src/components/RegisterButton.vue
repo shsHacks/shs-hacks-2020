@@ -1,5 +1,5 @@
 <template>
-  <a class="register-button" href="">Register Now</a>  
+  <a class="register-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd32w4xnL_L7Tcw0kpFQeJnaqX1Al04gNpohbuxeUi27jhEVA/viewform?usp=sf_link" target="_blank">Register Now</a>  
 </template>
 
 <script>
