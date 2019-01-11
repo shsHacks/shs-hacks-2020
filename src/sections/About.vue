@@ -1,10 +1,8 @@
 <template>
   <sliding-title title="About Us" :scroll="scroll" :color="color">
-    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor ipsum non ante <span class="highlight">gravida</span> cursus.
-      
-      Suspendisse a ullamcorper massa. Cras lobortis libero id nibh <span class="highlight">commodo</span>, a mollis urna consectetur. Duis ultrices eros vestibulum aliquam laoreet. Nam tristique leo at neque porttitor auctor. Aenean ullamcorper erat ac sodales auctor. Curabitur quis nulla eu turpis lobortis volutpat eget efficitur massa.
-      
-      Proin dapibus, eros at viverra pellentesque, erat lectus auctor sem, at tempus nisl nisi id purus. Vestibulum molestie, orci at egestas fringilla, magna enim venenatis metus, a tempus orci eros vel velit. Cras ligula nibh, feugiat eu mauris molestie, dignissim pharetra odio. Proin ut pretium leo, at accumsan augue. Praesent semper hendrerit quam eu varius. Duis id congue augue.
+    <div class="text">
+      <p><span class="highlight">shsHacks</span> is a first time high school hackathon being held at Adlai E. Stevenson High School in Lincolnshire, Illinois on <span class="highlight">March 2-3</span>, 2019.</p>
+      <p>Over <span class="highlight">200</span> high school students will come together and participate in the "marathon" to bring their ideas into reality within the span of <span class="highlight">24 hours</span></p>
     </div>
   </sliding-title>
 </template>
@@ -24,8 +22,9 @@ export default {
 
 <style lang="sass" scoped>
 .text
-  font-size: 1.25em
-  white-space: pre-line
+  font-size: 1.2em
+  p
+    margin-top: 0
 
   .highlight
     color: var(--secondary-color)

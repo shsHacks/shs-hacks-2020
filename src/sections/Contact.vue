@@ -1,14 +1,11 @@
 <template>
   <div class="contact">
-    <!-- <div class="text">Have another question?</div> -->
-    <!-- <div class="card"> -->
-      <form class="card" action="https://formspree.io/contact@shshacks.io" method="POST">
-        <div class="title">Contact Us</div>
-        <textarea class="message field" type="text" name="message" placeholder="Message"/>
-        <input class="email field" type="email" name="_replyto" placeholder="Your Email (so we can reply back)">
-        <input class="submit" type="submit" value="Send">
-      </form>
-    <!-- </div> -->
+    <form class="card" action="https://formspree.io/contact@shshacks.io" method="POST">
+      <div class="title">Contact Us</div>
+      <textarea class="message field" type="text" name="message" placeholder="Message"/>
+      <input class="email field" type="email" name="_replyto" placeholder="Your Email (so we can reply back)">
+      <input class="submit" type="submit" value="Send">
+    </form>
   </div>
 </template>
 

@@ -74,17 +74,10 @@ export default {
 @import 'src/style.sass'
 
 .sliding-title
-  // height: 100%
-  // overflow: auto
-  // padding-top: $menu-height
-  // position: relative
   margin: auto
   max-width: 1000px
-  // border-radius: 20px
-  // background-color: lighten($primary-color, 60%)
   display: flex
   margin-top: 50px
-  // width: 95%
 
   .title
     font-size: 2em

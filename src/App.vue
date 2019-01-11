@@ -9,7 +9,7 @@
       <about id="about" :scroll="contentScroll" :color="primaryColor"/>
       <location id="location" :scroll="contentScroll" :color="colors.blue"/>
       <schedule id="schedule" :scroll="contentScroll" :color="colors.red"/>
-      <faq id="faq" :scroll="contentScroll" :color="secondaryColor"/>
+      <faq id="faq" :scroll="contentScroll" :color="colors.teal"/>
       <sponsors/>
       <contact id="contact"/>
     </div>
