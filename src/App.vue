@@ -53,7 +53,7 @@ export default {
 
     // TODO: Debounce the following
     // some heights may change when the window is resized (other components depend on the accuracy of height-change)
-    window.addEventListener('resize', () => eventBus.$emit('height-change'));
+    // window.addEventListener('resize', () => eventBus.$emit('height-change'));
   },
   computed: {
     menuSticky() {

@@ -1,5 +1,5 @@
 <template>
-  <div class="top" :class="{ 'shift-up': shiftUp }">
+  <div class="top" :class="{ 'shift-up': shiftUp }" :style="style">
     <div class="main-tab">
       <!-- <div class="logo"></div> -->
       <img class="logo" src="/assets/logo.png">
@@ -19,14 +19,24 @@ export default {
   data() {
     return {
       shiftUp: false,
+      windowHeight: window.innerHeight,
     }
   },
-  created() {
+  computed: {
+    style() {
+      return {
+        height: this.shiftUp ? `${this.windowHeight - 90}px` : `${this.windowHeight}px`,
+      };
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', () => this.windowHeight = window.innerHeight);
+
     setTimeout(() => this.shiftUp = true, 300);
     
     // when the height of an element changes, need to announce that to all other elements using the event bus
-    // 300 (above timeout) + 600 (animation duration) + 100 (leeway) = 1000
-    setTimeout(() => eventBus.$emit('height-change'), 1000);
+    // need to wait until the transition of height ends first
+    this.$el.addEventListener('transitionend', () => eventBus.$emit('height-change'));
   },
   components: { RegisterButton },
 }
@@ -37,12 +47,12 @@ export default {
 
 .top
   width: 100%
-  height: 100vh
+  // height: 100vh
   position: relative
   transition: height .6s
 
-  &.shift-up
-    height: calc(100vh - #{$menu-height})
+  // &.shift-up
+  //   height: calc(100vh - #{$menu-height})
 
   .main-tab
     $width: 600px
