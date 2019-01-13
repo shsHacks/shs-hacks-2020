@@ -2,14 +2,18 @@
   <div id="app" :style="appStyle">
     <div id="background"></div>
 
-    <top ref="top"/>
+    <top ref="top" :menu-height="menuHeight"/>
     <my-menu :sticky="menuSticky" @scroll="scrollTo($event)" ref="menu"/>
 
     <div id="content">
       <about id="about" :scroll="contentScroll" :color="primaryColor"/>
       <location id="location" :scroll="contentScroll" :color="colors.blue"/>
       <schedule id="schedule" :scroll="contentScroll" :color="colors.red"/>
-      <faq id="faq" :scroll="contentScroll" :color="colors.teal"/>
+      <switch-by-device>
+        <faq id="faq" :scroll="contentScroll" :color="colors.teal" :num-columns="2"/>
+        <faq slot="mobile" id="faq" :scroll="contentScroll" :color="colors.teal" :num-columns="1"/>
+      </switch-by-device>
+      
       <sponsors/>
       <contact id="contact"/>
     </div>
@@ -25,6 +29,7 @@ import Schedule from 'src/sections/Schedule.vue';
 import Faq from 'src/sections/Faq.vue';
 import Sponsors from 'src/sections/Sponsors.vue';
 import Contact from 'src/sections/Contact.vue';
+import SwitchByDevice from 'src/components/SwitchByDevice.vue';
 
 import { eventBus } from 'src/js/event-bus.js';
 import colors from 'src/data/colors.json';
@@ -49,18 +54,14 @@ export default {
     this.setHeights();
 
     // when the height of something changes, get the new values
-    eventBus.$on('height-change', () => this.setHeights());
-
-    // TODO: Debounce the following
-    // some heights may change when the window is resized (other components depend on the accuracy of height-change)
-    // window.addEventListener('resize', () => eventBus.$emit('height-change'));
+    eventBus.$on('top-height-change', () => this.setHeights());
   },
   computed: {
     menuSticky() {
       return this.scroll >= this.topHeight;
     },
     contentScroll() {
-      return this.scroll + this.menuHeight + 50;
+      return this.scroll + this.menuHeight + 30;
     },
     appStyle() {
       return {
@@ -97,6 +98,7 @@ export default {
     Faq,
     Sponsors,
     Contact,
+    SwitchByDevice,
   }
 }
 </script>
@@ -108,7 +110,10 @@ body
   margin: 0
 
 #app
+  --menu-height: 90px
   font-family: Nunito, sans-serif
+  +mobile
+    --menu-height: 70px
 
 #background
   width: 100%

@@ -17,9 +17,15 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import 'src/style.sass'
+
 .location
   width: 100%
   height: 600px
   border: 0
+  +tablet
+    height: 500px
+  +mobile
+    height: 400px
 
 </style>

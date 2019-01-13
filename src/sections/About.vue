@@ -22,8 +22,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import 'src/style.sass'
+
 .text
   font-size: 1.2em
+  +mobile
+    font-size: 1.1em
   p
     margin-top: 0
 

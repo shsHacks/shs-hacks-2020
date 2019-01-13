@@ -3,25 +3,22 @@
     <div class="menu" :class="{ sticky }">
       <div class="info">
         <img class="logo" src="assets/logo-no-text.png">
-        <!-- <div class="logo"></div> -->
-        <!-- <div class="title">shsHacks</div> -->
       </div>
       <div class="filler"></div>
 
-      <div class="menu-item" @click="$emit('scroll', '#about')" v-hammer:tap="() => $emit('scroll', '#about')">
+      <div class="menu-item hide-mobile-sticky" @click="$emit('scroll', '#about')" v-hammer:tap="() => $emit('scroll', '#about')">
         <div class="line fake"></div> About Us <div class="line"></div>
       </div>
-      <div class="menu-item" @click="$emit('scroll', '#location')" v-hammer:tap="() => $emit('scroll', '#location')">
+      <div class="menu-item hide-mobile-sticky" @click="$emit('scroll', '#location')" v-hammer:tap="() => $emit('scroll', '#location')">
         <div class="line fake"></div> Location <div class="line"></div>
       </div>
-      <div class="menu-item" @click="$emit('scroll', '#schedule')" v-hammer:tap="() => $emit('scroll', '#schedule')">
+      <div class="menu-item hide-mobile-sticky" @click="$emit('scroll', '#schedule')" v-hammer:tap="() => $emit('scroll', '#schedule')">
         <div class="line fake"></div> Schedule <div class="line"></div>
       </div>
-      <div class="menu-item" @click="$emit('scroll', '#faq')" v-hammer:tap="() => $emit('scroll', '#faq')">
+      <div class="menu-item hide-mobile" @click="$emit('scroll', '#faq')" v-hammer:tap="() => $emit('scroll', '#faq')">
         <div class="line fake"></div> FAQ <div class="line"></div>
       </div>
-      <!-- <div class="menu-item" @click="$emit('scroll', )"><div class="line fake"></div> Sponsors <div class="line"></div></div> -->
-      <div class="menu-item" @click="$emit('scroll', '#contact')" v-hammer:tap="() => $emit('scroll', '#contact')">
+      <div class="menu-item hide-tablet-sticky hide-mobile" @click="$emit('scroll', '#contact')" v-hammer:tap="() => $emit('scroll', '#contact')">
         <div class="line fake"></div> Contact Us <div class="line"></div>
       </div>
       
@@ -49,17 +46,17 @@ export default {
 
 // Menu container is used to fill the space left when the menu becomes sticky (position: fixed)
 .menu-container
-  height: $menu-height
+  height: var(--menu-height)
 
 .menu
-  $menu-margin: 75px
-  $button-width: 140px
-  height: $menu-height
+  --menu-margin: 75px
+  --button-width: 140px
+  height: var(--menu-height)
   background-color: white
   display: flex
   position: relative
   align-items: center
-  padding: 0 $menu-margin
+  padding: 0 var(--menu-margin)
   justify-content: space-around
   width: 100%;
   box-sizing: border-box;
@@ -67,10 +64,12 @@ export default {
   overflow: hidden
   transition: box-shadow .3s
   z-index: 100
+  +tablet
+    --menu-margin: 25px
+  +mobile
+    --menu-margin: 15px
 
   .menu-item
-    // line-height: 60px
-    // color: $primary-color
     color: #666666
     font-weight: bold
     font-size: 1.4em
@@ -79,9 +78,15 @@ export default {
     margin: 0 15px
     transform: font-size .3s
     cursor: pointer
-    // flex: 1
-    // text-align: center
-    // border-radius: 50px
+    +mobile
+      font-size: 1.1em
+      margin: 0 10px
+    &.hide-tablet
+      +tablet
+        display: none
+    &.hide-mobile
+      +mobile
+        display: none
 
     .line
       height: 4px
@@ -103,15 +108,13 @@ export default {
     display: flex
     align-items: center
     position: absolute
-    left: $menu-margin
-    transform: translateX(-$menu-margin - 300px)
+    left: var(--menu-margin)
+    transform: translateX(calc(-1 * var(--menu-margin) - 300px))
     transition: transform .3s
 
     .logo
       display: inline-block
-      // height: 60px
-      // width: 60px
-      height: $menu-height / 5 * 3
+      height: calc(var(--menu-height) / 5 * 3)
       margin-right: 10px
 
     .title
@@ -122,13 +125,13 @@ export default {
 
   .register
     font-size: 1em
-    width: $button-width
+    width: var(--button-width)
 
   // need to use a wrapper for button animations because .register-button is already using the transform property to scale on hover
   .button-wrapper
     position: absolute
-    right: $menu-margin
-    transform: translateX($button-width + $menu-margin + 10px)
+    right: var(--menu-margin)
+    transform: translateX(calc(var(--button-width) + var(--menu-margin) + 10px))
     transition: transform .3s
 
   .filler
@@ -147,15 +150,22 @@ export default {
       flex: 1
     
     .button-filler
-      width: $button-width
+      width: var(--button-width)
       margin-left: 15px
 
     .menu-item
       font-size: 1.2em
+      &.hide-tablet-sticky
+        +tablet
+          display: none
+      &.hide-mobile-sticky
+        +mobile
+          display: none
 
     .info
       transform: translateX(0)
 
     .button-wrapper
       transform: translateX(0)
+
 </style>

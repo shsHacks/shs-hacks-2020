@@ -54,6 +54,10 @@ export default {
     height: $card-height
     transform: translateY(-$card-height/2)
     width: 60%
+    +tablet
+      width: 80%
+    +mobile
+      width: 90%
 
     .title
       color: rgba(0, 0, 0, 0.8)
@@ -72,6 +76,8 @@ export default {
       font-size: 1.2em
       border-radius: 10px
       margin: 10px 25px
+      +mobile
+        font-size: 1em
       &:focus
         border-color: var(--primary-color)
         border-width: 3px

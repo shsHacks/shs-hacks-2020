@@ -8,7 +8,8 @@
           :class="{ selected: index === selectedDay }"
           :style="getTabStyle(index)"
           @click="selectedDay = index">
-          {{ day.date }}
+          <span class="normal">{{ getDayString(day.date) }}</span>
+          <span class="mobile">{{ getDayStringMobile(day.date) }}</span>
         </div>
       </div>
 
@@ -21,7 +22,10 @@
           :style="getEventContainerStyle(index)"
           ref="events-container">
           <div class="event" v-for="event in day.events">
-            <div class="time">{{ event.time }}</div>
+            <div class="time">
+              <div class="start" v-html="setSmallCaps(event.start)"/>
+              <div class="end" v-html="setSmallCaps(event.end)"/>
+            </div>
             <div class="text">{{ event.text }}</div>
           </div>
         </div>
@@ -69,6 +73,23 @@ export default {
       return {
         transform: `translateY(${translatePercent}%)`,
       };
+    },
+    setSmallCaps(timeString) {
+      const smallCapsStyle = 'style="font-size: .8em"';
+
+      if (timeString) {
+        return timeString
+          .replace(/AM/gi, `<span ${smallCapsStyle}>AM</span>`)
+          .replace(/PM/gi, `<span ${smallCapsStyle}>PM</span>`);
+      }
+
+      return '';
+    },
+    getDayString(dateString) {
+      return new Date(dateString).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    },
+    getDayStringMobile(dateString) {
+      return new Date(dateString).toLocaleDateString('en-US', { weekday: 'long' });
     }
   },
   watch: {
@@ -88,6 +109,8 @@ export default {
     overflow: auto
     padding-top: 10px
     padding-left: 10px
+    +mobile
+      width: calc(100% + 20px) // +20px is to compensate for the shifted tab
 
     .tab
       display: inline-block
@@ -104,15 +127,27 @@ export default {
       cursor: pointer
       color: rgba(0, 0, 0, 0.8)
       transition: color .3s
-
       &.selected
         color: var(--color)
         cursor: default
-      
       &:hover
         color: var(--color)
 
+      .mobile
+        display: none
+
+      +mobile
+        width: 110px
+        padding: 15px 10px
+
+        .normal
+          display: none
+
+        .mobile
+          display: inline
+
   .card
+    --time-width: 150px
     margin-left: 10px // must equal the padding-left of .tabs
     width: 100%
     +shadow-alt
@@ -122,12 +157,14 @@ export default {
     overflow: hidden
     border-radius: 0 20px 20px 20px
     transition: height .2s
+    +mobile
+      --time-width: 100px
 
     .time-background
       position: absolute
       top: 0
       left: 0
-      width: 30%
+      width: var(--time-width)
       height: 100%
       background-color: var(--color)
 
@@ -139,11 +176,16 @@ export default {
       transition: transform .4s
 
       .event
-        padding: 25px 0
+        // padding: 25px 0
+        height: 75px
+        display: flex
+        align-items: center
+        border-bottom: white solid;
+        box-sizing: border-box;
 
         .time
           display: inline-block
-          width: 30%
+          width: var(--time-width)
           text-align: right
           font-size: 1.1em
           font-weight: bold
@@ -152,14 +194,23 @@ export default {
           color: white
           box-sizing: border-box
           padding-right: 15px
+          +mobile
+            padding-right: 10px
+
+          div
+            margin: 5px 0
 
         .text
           display: inline-block
           font-size: 1.2em
-          margin-left: 20px
+          width: calc(100% - var(--time-width))
+          padding-left: 20px
+          box-sizing: border-box
           // color: $secondary-color
           // font-weight: bold
           color: rgba(0, 0, 0, 0.8)
+          +mobile
+            padding-left: 10px
 
       
 </style>

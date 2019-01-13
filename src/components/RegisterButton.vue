@@ -25,6 +25,9 @@ export default {
   transition: background-color .2s, color .2s, transform .2s
   display: block
   box-sizing: border-box
+  +mobile
+    width: 225px
+    font-size: 1.15em
 
   &:hover
     background-color: var(--primary-color)

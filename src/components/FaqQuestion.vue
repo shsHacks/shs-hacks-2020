@@ -17,10 +17,12 @@ export default {
     return {
       expanded: false,
       height: 0,
+      windowWidth: window.innerWidth,
     }
   },
   mounted() {
     this.setHeight();
+    window.addEventListener('resize', () => this.windowWidth = window.innerWidth);
   },
   methods: {
     onClick() {
@@ -34,6 +36,11 @@ export default {
         this.height = this.$el.querySelector('.question').offsetHeight;
       }
     }
+  },
+  watch: {
+    windowWidth() {
+      this.setHeight();
+    }
   }
 }
 </script>
@@ -43,13 +50,15 @@ export default {
 
 .faq-question
   +shadow
-  margin: 15px
+  margin: 15px 10px
   border-radius: 20px
   // padding: 15px
   background-color: var(--color)
   cursor: pointer
   overflow: hidden
   transition: height .3s, background-color .3s
+  +mobile
+    margin: 10px 0
   
   .question
     font-size: 1.3em

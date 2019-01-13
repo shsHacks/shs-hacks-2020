@@ -1,7 +1,7 @@
 <template>
   <sliding-title title="FAQ" :scroll="scroll" :color="color">
     <div class="faq" :style="{ '--color': color}">
-      <div class="questions-container" v-for="column in columns" :style="{ width: `calc(100% / ${numberOfColumns})` }">
+      <div class="questions-container" v-for="column in columns" :style="{ width: `calc(100% / ${numColumns})` }">
         <faq-question v-for="question in column" :question="question.question" :answer="question.answer"/>
       </div>
     </div>
@@ -19,10 +19,10 @@ export default {
   props: {
     scroll: { type: Number, required: true },
     color: { type: String, required: true },
+    numColumns: { type: Number, default: 1 },
   },
   data() {
     return {
-      numberOfColumns: 2,
       expanded: Array(questions.length).fill(false),
     };
   },
@@ -35,9 +35,9 @@ export default {
       //     and so on...
 
       const columns = [];
-      for (let i = 0; i < this.numberOfColumns; i++) {
+      for (let i = 0; i < this.numColumns; i++) {
         const column = [];
-        for (let j = i; j < questions.length; j += this.numberOfColumns) {
+        for (let j = i; j < questions.length; j += this.numColumns) {
           const question = Object.assign({ index: j }, questions[j]);
           column.push(question);
         }
@@ -45,12 +45,6 @@ export default {
       }
 
       return columns;
-    }
-  },
-  methods: {
-    expandOrCollapse(index) {
-      // need to use splice because https://vuejs.org/v2/guide/list.html#Caveats
-      this.expanded.splice(index, 1, !this.expanded[index]);
     }
   },
   components: { SlidingTitle, FaqQuestion }

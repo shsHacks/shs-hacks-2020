@@ -32,9 +32,10 @@ export default {
   },
   mounted() {
     this.setProperties();
+    window.addEventListener('resize', () => this.setProperties());
 
     // when the height of some other element changes, the offsetTop of this element will also change
-    eventBus.$on('height-change', () => this.setProperties());
+    eventBus.$on('top-height-change', () => this.setProperties());
   },
   computed: {
     titleTranslateY() {
@@ -78,6 +79,12 @@ export default {
   max-width: 1000px
   display: flex
   margin-top: 50px
+  width: 90%
+  +mobile-and-tablet
+    flex-direction: column
+    width: 80%
+  +mobile
+    width: 90%
 
   .title
     font-size: 2em
@@ -96,6 +103,13 @@ export default {
     margin: 0 25px
     // margin-top: 10px
     color: rgba(0, 0, 0, .8)
+    +mobile-and-tablet
+      margin: 0
+      margin-bottom: 30px
+      transform: none !important
+    +mobile
+      width: 200px
+      line-height: 65px
 
   .separator
     // height: 100%
@@ -104,6 +118,8 @@ export default {
     margin: 0 15px
     // flex-basis: 20px
     border-radius: 5px
+    +tablet
+      display: none
 
   .content
     margin: 0 15px
