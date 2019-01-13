@@ -2,7 +2,7 @@
   <div class="faq-question" :class="{ expanded }" @click="onClick" :style="{ height: `${height}px`}">
     <div class="container">
       <div class="question">{{ question }}</div>
-      <div class="answer">{{ answer }}</div>
+      <div class="answer" v-html="formattedAnswer"/>
     </div>
   </div>
 </template>
@@ -18,6 +18,12 @@ export default {
       expanded: false,
       height: 0,
       windowWidth: window.innerWidth,
+    }
+  },
+  computed: {
+    formattedAnswer() {
+      // replace hyphen lists with bullet point lists
+      return this.answer.replace(/- /g, '<span style="color: var(--color); font-weight: bold">• </span>');
     }
   },
   mounted() {
