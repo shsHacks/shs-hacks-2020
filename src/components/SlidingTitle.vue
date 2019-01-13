@@ -55,9 +55,6 @@ export default {
       const style = {
         transform: `translateY(${this.titleTranslateY}px)`,
       }
-      // if (this.isMobileDevice) {
-      //   style.transition = 'transform .1s';
-      // }
       return style;
     }
   },
@@ -89,19 +86,14 @@ export default {
   .title
     font-size: 2em
     font-weight: bold
-    // margin-top: 30px
-    // margin-left: 10px
     +shadow
     text-align: center
     width: 225px
     line-height: 75px
     display: inline-block
-    // padding: 15px 40px
     border-radius: 10px
     border-bottom: var(--color) 4px solid
-    // box-sizing: border-box
     margin: 0 25px
-    // margin-top: 10px
     color: rgba(0, 0, 0, .8)
     +mobile-and-tablet
       margin: 0
@@ -112,11 +104,9 @@ export default {
       line-height: 65px
 
   .separator
-    // height: 100%
     width: 3px
     background-color: var(--color)
     margin: 0 15px
-    // flex-basis: 20px
     border-radius: 5px
     +tablet
       display: none

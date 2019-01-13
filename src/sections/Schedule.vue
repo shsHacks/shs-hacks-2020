@@ -8,8 +8,10 @@
           :class="{ selected: index === selectedDay }"
           :style="getTabStyle(index)"
           @click="selectedDay = index">
-          <span class="normal">{{ getDayString(day.date) }}</span>
-          <span class="mobile">{{ getDayStringMobile(day.date) }}</span>
+          <switch-by-device>
+            <span>{{ getDayString(day.date) }}</span>
+            <span slot="mobile">{{ getDayStringMobile(day.date) }}</span>
+          </switch-by-device>
         </div>
       </div>
 
@@ -36,6 +38,7 @@
 
 <script>
 import SlidingTitle from 'src/components/SlidingTitle.vue';
+import SwitchByDevice from "src/components/SwitchByDevice.vue";
 import schedule from 'src/data/schedule.json';
 
 export default {
@@ -97,7 +100,7 @@ export default {
       this.setCardHeight();
     }
   },
-  components: { SlidingTitle },
+  components: { SlidingTitle, SwitchByDevice },
 }
 </script>
 
@@ -133,18 +136,9 @@ export default {
       &:hover
         color: var(--color)
 
-      .mobile
-        display: none
-
       +mobile
         width: 110px
         padding: 15px 10px
-
-        .normal
-          display: none
-
-        .mobile
-          display: inline
 
   .card
     --time-width: 150px
@@ -176,7 +170,6 @@ export default {
       transition: transform .4s
 
       .event
-        // padding: 25px 0
         height: 75px
         display: flex
         align-items: center
@@ -189,8 +182,6 @@ export default {
           text-align: right
           font-size: 1.1em
           font-weight: bold
-          // background-color: rgba(0, 0, 0, .02)
-          // background-color: $secondary-color
           color: white
           box-sizing: border-box
           padding-right: 15px
@@ -206,8 +197,6 @@ export default {
           width: calc(100% - var(--time-width))
           padding-left: 20px
           box-sizing: border-box
-          // color: $secondary-color
-          // font-weight: bold
           color: rgba(0, 0, 0, 0.8)
           +mobile
             padding-left: 10px

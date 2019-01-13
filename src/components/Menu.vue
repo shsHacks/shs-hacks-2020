@@ -60,7 +60,6 @@ export default {
   justify-content: space-around
   width: 100%;
   box-sizing: border-box;
-  // border-bottom: $primary-color 2px solid
   overflow: hidden
   transition: box-shadow .3s
   z-index: 100

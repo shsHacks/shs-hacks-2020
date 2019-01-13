@@ -78,8 +78,6 @@ export default {
     transition: color .3s, width .3s
 
   .answer
-    // height: 0
-    // overflow: hidden
     margin: 0 20px
     padding-bottom: 7.5px
     font-size: 1.1em
