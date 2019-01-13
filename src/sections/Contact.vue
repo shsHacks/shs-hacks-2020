@@ -6,12 +6,29 @@
       <input class="email field" type="email" name="_replyto" placeholder="Your Email (so we can reply back)">
       <input class="submit" type="submit" value="Send">
     </form>
+
+    <div class="icons">
+      <a href="mailto:contact@shshacks.io" target="_blank"><font-awesome-icon class="icon" :icon="faEnvelope"/></a>
+      <a href="https://www.facebook.com/shshacks2019/" target="_blank"><font-awesome-icon class="icon" :icon="faFacebookSquare"/></a>
+      <a href="https://www.instagram.com/shshacks2019/" target="_blank"><font-awesome-icon class="icon" :icon="faInstagram"/></a>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookSquare, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
+export default {
+  data() {
+    return {
+      faEnvelope,
+      faFacebookSquare,
+      faInstagram,
+    }
+  },
+  components: { FontAwesomeIcon },
 }
 </script>
 
@@ -23,6 +40,7 @@ export default {
   width: 100%
   background-color: var(--primary-color)
   margin-top: 250px
+  position: relative
 
   .card
     $card-height: 310px
@@ -92,6 +110,18 @@ export default {
         color: white
         transform: scale(1.1)
         +shadow-alt
+
+  .icons
+    position: absolute
+    bottom: 0
+    height: 50px
+    font-size: 1.75em
+    width: 100%
+    text-align: center
+
+    .icon
+      margin: 0 10px
+      color: white
 
 </style>
 
