@@ -43,6 +43,7 @@ export default {
       primaryColor: '#275d38',
       secondaryColor: '#c99700',
       colors,
+      facebookXfbmlLoaded: false,
     }
   },
   created() {
@@ -85,6 +86,25 @@ export default {
             top: top - this.menuHeight - 25,
             behavior: 'smooth',
           });
+        }
+      }
+    }
+  },
+  watch: {
+    menuSticky() {
+      if (window.FB) { // make sure facebook sdk is loaded first
+        if (this.menuSticky) { // if the menu is sticky (fixed to the top), show the plugin
+          if (this.facebookXfbmlLoaded) {
+            FB.CustomerChat.show(false);
+          } else { // if the plugin has not been loaded yet (first load)
+            FB.XFBML.parse();
+            this.facebookXfbmlLoaded = true;
+          }
+        } else {
+          // don't need to hide plugin if it was never loaded in the first place
+          if (this.facebookXfbmlLoaded) {
+            FB.CustomerChat.hide();
+          }
         }
       }
     }

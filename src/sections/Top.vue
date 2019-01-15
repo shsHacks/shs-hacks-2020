@@ -63,7 +63,7 @@ export default {
     border-top-left-radius: 20px
     border-top-right-radius: 20px
     display: flex
-    flex-direction: column 
+    flex-direction: column
     align-items: center
     border-bottom: 5px solid var(--primary-color)
     +mobile
