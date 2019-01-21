@@ -1,10 +1,16 @@
 <template>
-  <a class="register-button" href="https://docs.google.com/forms/d/e/1FAIpQLSd32w4xnL_L7Tcw0kpFQeJnaqX1Al04gNpohbuxeUi27jhEVA/viewform?usp=sf_link" target="_blank">Register Now</a>  
+  <div class="register-button" @click="showRegisterPopup">Register Now</div>  
 </template>
 
 <script>
-export default {
+import { eventBus } from 'src/js/event-bus.js';
 
+export default {
+  methods: {
+    showRegisterPopup() {
+      eventBus.$emit('show-register-popup');
+    }
+  }
 }
 </script>
 
@@ -21,10 +27,10 @@ export default {
   text-align: center
   line-height: 225%
   letter-spacing: .05em
-  text-decoration: none
   transition: background-color .2s, color .2s, transform .2s
   display: block
   box-sizing: border-box
+  cursor: pointer
   +mobile
     width: 225px
     font-size: 1.15em

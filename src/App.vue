@@ -1,6 +1,7 @@
 <template>
   <div id="app" :style="appStyle">
     <div id="background"></div>
+    <register-popup :show="showRegisterPopup"/>
 
     <top ref="top" :menu-height="menuHeight"/>
     <my-menu :sticky="menuSticky" @scroll="scrollTo($event)" ref="menu"/>
@@ -30,6 +31,7 @@ import Faq from 'src/sections/Faq.vue';
 import Sponsors from 'src/sections/Sponsors.vue';
 import Contact from 'src/sections/Contact.vue';
 import SwitchByDevice from 'src/components/SwitchByDevice.vue';
+import RegisterPopup from 'src/components/RegisterPopup.vue';
 
 import { eventBus } from 'src/js/event-bus.js';
 import colors from 'src/data/colors.json';
@@ -44,6 +46,7 @@ export default {
       secondaryColor: '#c99700',
       colors,
       facebookXfbmlLoaded: false,
+      showRegisterPopup: false,
     }
   },
   created() {
@@ -56,6 +59,9 @@ export default {
 
     // when the height of something changes, get the new values
     eventBus.$on('top-height-change', () => this.setHeights());
+
+    eventBus.$on('show-register-popup', () => this.showRegisterPopup = true);
+    eventBus.$on('hide-register-popup', () => this.showRegisterPopup = false);
   },
   computed: {
     menuSticky() {
@@ -119,6 +125,7 @@ export default {
     Sponsors,
     Contact,
     SwitchByDevice,
+    RegisterPopup,
   }
 }
 </script>
