@@ -11,6 +11,7 @@
 
 <script>
 let sponsors = [
+  { image: 'culvers.svg', link: 'https://www.culvers.com/' },
   { image: 'wolfram.png', link: 'http://www.wolfram.com/' },
 ]
 
