@@ -13,6 +13,7 @@
 let sponsors = [
   { image: 'culvers.svg', link: 'https://www.culvers.com/' },
   { image: 'wolfram.png', link: 'http://www.wolfram.com/' },
+  { image: 'invision.png', link: 'https://www.invisionapp.com/' },
 ]
 
 export default {
