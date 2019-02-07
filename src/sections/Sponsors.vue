@@ -2,7 +2,7 @@
   <div>
     <p class="title">A Huge Thank You to Our Generous Sponsors!</p>
     <div class="sponsors">
-      <a v-for="sponsor in sponsors" class="sponsor" :href="sponsor.link" :key="sponsor.image">
+      <a v-for="sponsor in sponsors" class="sponsor" :href="sponsor.link" :key="sponsor.image" target="_blank">
         <img :src="`/assets/sponsors/${sponsor.image}`">
       </a>
     </div>
