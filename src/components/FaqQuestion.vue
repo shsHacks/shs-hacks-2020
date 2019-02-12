@@ -67,7 +67,7 @@ export default {
     margin: 10px 0
   
   .question
-    font-size: 1.3em
+    font-size: 1.2em
     font-weight: bold
     text-align: center
     padding: 15px 20px

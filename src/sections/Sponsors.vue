@@ -2,7 +2,7 @@
   <div>
     <p class="title">A Huge Thank You to Our Generous Sponsors!</p>
     <div class="sponsors">
-      <a v-for="sponsor in sponsors" class="sponsor" :href="sponsor.link" :key="sponsor.image" target="_blank">
+      <a v-for="sponsor in sponsors" class="sponsor" :class="{ large: sponsor.large }" :href="sponsor.link" :key="sponsor.image" target="_blank">
         <img :src="`/assets/sponsors/${sponsor.image}`">
       </a>
     </div>
@@ -11,8 +11,8 @@
 
 <script>
 let sponsors = [
-  { image: 'culvers.svg', link: 'https://www.culvers.com/' },
-  { image: 'paylocity.svg', link: 'https://www.paylocity.com/'},
+  { image: 'culvers.svg', link: 'https://www.culvers.com/', large: true },
+  { image: 'paylocity.svg', link: 'https://www.paylocity.com/', large: true },
   { image: 'wolfram.png', link: 'http://www.wolfram.com/' },
   { image: 'invision.png', link: 'https://www.invisionapp.com/' },
 ]
@@ -52,9 +52,13 @@ export default {
   .sponsor
     width: 25%
     margin: 25px
+    &.large
+      width: 40%
     +mobile
       width: 40%
       margin: 15px
+      &.large
+        width: 60%
 
     img
       width: 100%

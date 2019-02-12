@@ -30,5 +30,9 @@
   {
     "question": "Who owns the rights?",
     "answer": "You and your team own all the rights to everything you create at shsHacks!"
+  },
+  {
+    "question": "I don't know how to code",
+    "answer": "With beginner-friendly workshops, mentors around the clock, and friendly hackers around you, shsHacks is the perfect place to push your first line of code! We'll have everything to help you build something you're proud of!"
   }
 ]
