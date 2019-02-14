@@ -13,6 +13,8 @@
 let sponsors = [
   { image: 'culvers.svg', link: 'https://www.culvers.com/', large: true },
   { image: 'paylocity.svg', link: 'https://www.paylocity.com/', large: true },
+  { image: 'imc.png', link: 'https://www.imc.com/us/', large: true },
+  { image: 'bswift.jpg', link: 'https://www.bswift.com/', large: true },
   { image: 'wolfram.png', link: 'http://www.wolfram.com/' },
   { image: 'invision.png', link: 'https://www.invisionapp.com/' },
 ]
