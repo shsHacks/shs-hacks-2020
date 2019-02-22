@@ -5,8 +5,8 @@
     <div class="popup">
       <div class="title">Do You Go To Stevenson High School?</div>
       <div class="buttons">
-        <a class="button" :href="otherRegisterUrl" target="_blank" tabindex="0" @click="hidePopup('No')">No</a>
-        <a class="button" :href="shsRegisterUrl" target="_blank" tabindex="0" @click="hidePopup('Yes')">Yes</a>
+        <a class="button" :href="otherRegisterUrl" tabindex="0" @click="hidePopup('No')">No</a>
+        <a class="button" :href="shsRegisterUrl" tabindex="0" @click="hidePopup('Yes')">Yes</a>
       </div>
     </div>
   </div>
