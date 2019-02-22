@@ -2,7 +2,13 @@
   <div>
     <p class="title">A Huge Thank You to Our Generous Sponsors!</p>
     <div class="sponsors">
-      <a v-for="sponsor in sponsors" class="sponsor" :class="{ large: sponsor.large }" :href="sponsor.link" :key="sponsor.image" target="_blank">
+      <a
+        v-for="sponsor in sponsors"
+        class="sponsor"
+        :class="{ large: sponsor.large, small: sponsor.small }"
+        :href="sponsor.link"
+        :key="sponsor.image"
+        target="_blank">
         <img :src="`/assets/sponsors/${sponsor.image}`">
       </a>
     </div>
@@ -14,9 +20,10 @@ let sponsors = [
   { image: 'culvers.svg', link: 'https://www.culvers.com/', large: true },
   { image: 'paylocity.svg', link: 'https://www.paylocity.com/', large: true },
   { image: 'imc.png', link: 'https://www.imc.com/us/', large: true },
-  { image: 'bswift.jpg', link: 'https://www.bswift.com/', large: true },
-  { image: 'wolfram.png', link: 'http://www.wolfram.com/' },
-  { image: 'invision.png', link: 'https://www.invisionapp.com/' },
+  { image: 'alight.png', link: 'https://alight.com/', large: true },
+  { image: 'bswift.jpg', link: 'https://www.bswift.com/' },
+  { image: 'wolfram.png', link: 'http://www.wolfram.com/', small: true },
+  { image: 'invision.png', link: 'https://www.invisionapp.com/', small: true },
 ]
 
 export default {
@@ -52,13 +59,20 @@ export default {
   justify-content: space-around
 
   .sponsor
-    width: 25%
-    margin: 25px
+    width: 31%
+    margin: 10px 25px
+    display: flex
+    align-items: center
+    justify-content: center
+    &.small
+      width: 17%
     &.large
       width: 40%
     +mobile
       width: 40%
       margin: 15px
+      &.small
+        width: 28%
       &.large
         width: 60%
 
