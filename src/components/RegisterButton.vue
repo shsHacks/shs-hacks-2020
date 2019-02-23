@@ -1,5 +1,6 @@
 <template>
-  <div class="register-button" @click="showRegisterPopup">Register Now</div>  
+  <!-- <div class="register-button" @click="showRegisterPopup">Register Now</div>   -->
+  <div class="register-button closed">Registration Closed</div>
 </template>
 
 <script>
@@ -40,6 +41,16 @@ export default {
     color: white
     transform: scale(1.1)
     +shadow-alt
+
+  &.closed
+    background-color: #c3c3c3
+    border: none
+    color: #555
+    cursor: default
+
+    &:hover
+      box-shadow: none
+      transform: none
 
 </style>
 

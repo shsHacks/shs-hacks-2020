@@ -22,10 +22,10 @@
         <div class="line fake"></div> Contact Us <div class="line"></div>
       </div>
       
-      <div class="button-filler"></div>
+      <!-- <div class="button-filler"></div>
       <div class="button-wrapper">
         <register-button class="register"/>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

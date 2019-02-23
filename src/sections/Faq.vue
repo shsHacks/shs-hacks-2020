@@ -13,7 +13,6 @@ import SlidingTitle from 'src/components/SlidingTitle.vue';
 import FaqQuestion from 'src/components/FaqQuestion.vue';
 
 import questions from 'src/data/faq.json';
-// TODO: Add "What if I don't know how to code>" to FAQ
 
 export default {
   props: {
