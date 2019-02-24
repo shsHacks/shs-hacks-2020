@@ -6,6 +6,7 @@
         v-for="sponsor in sponsors"
         class="sponsor"
         :class="{ large: sponsor.large, small: sponsor.small }"
+        :style="{ padding: `0 ${sponsor.padding}px` }"
         :href="sponsor.link"
         :key="sponsor.image"
         target="_blank">
@@ -21,6 +22,7 @@ let sponsors = [
   { image: 'paylocity.svg', link: 'https://www.paylocity.com/', large: true },
   { image: 'imc.png', link: 'https://www.imc.com/us/', large: true },
   { image: 'alight.png', link: 'https://alight.com/', large: true },
+  { image: 'lg.png', link: 'https://lg.com/' },
   { image: 'bswift.jpg', link: 'https://www.bswift.com/' },
   { image: 'wolfram.png', link: 'http://www.wolfram.com/', small: true },
   { image: 'invision.png', link: 'https://www.invisionapp.com/', small: true },
@@ -64,6 +66,7 @@ export default {
     display: flex
     align-items: center
     justify-content: center
+    box-sizing: border-box
     &.small
       width: 17%
     &.large
