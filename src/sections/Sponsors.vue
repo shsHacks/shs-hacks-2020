@@ -18,9 +18,9 @@
 
 <script>
 let sponsors = [
+  { image: 'imc.png', link: 'https://www.imc.com/us/', large: true },
   { image: 'culvers.svg', link: 'https://www.culvers.com/', large: true },
   { image: 'paylocity.svg', link: 'https://www.paylocity.com/', large: true },
-  { image: 'imc.png', link: 'https://www.imc.com/us/', large: true },
   { image: 'alight.png', link: 'https://alight.com/', large: true },
   { image: 'lg.png', link: 'https://lg.com/' },
   { image: 'bswift.jpg', link: 'https://www.bswift.com/' },
