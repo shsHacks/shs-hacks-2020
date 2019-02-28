@@ -2,22 +2,26 @@
   {
     "date": "3/2/2019",
     "events": [
-      { "start": "11:00AM", "end": "12:30PM", "text": "Arrival and Check-in" },
-      { "start": "12:45PM", "end": "1:30PM", "text": "Opening Ceremony" },
-      { "start": "1:30PM", "text": "Hacking Commences" },
-      { "start": "2:00PM", "end": "6:00PM", "text": "Mini Presentations" },
-      { "start": "6:00PM", "end": "8:00PM", "text": "Dinner" }
+      { "start": "12:30AM", "end": "1:30PM", "text": "Arrival and Check-in" },
+      { "start": "1:30PM", "end": "2:00PM", "text": "Opening Ceremony" },
+      { "start": "2:00PM", "text": "Hacking Commences" },
+      { "start": "2:30PM", "end": "4:00PM", "text": "Build Your First Website Workshop" },
+      { "start": "4:15PM", "end": "5:45PM", "text": "Google Assistant Workshop"},
+      { "start": "6:00PM", "end": "7:00PM", "text": "Dinner" },
+      { "start": "8:00PM", "end": "9:00PM", "text": "Firebase Workshop" },
+      { "start": "9:15PM", "end": "10:45PM", "text": "Slack App Workshop" }
     ]
   },
   {
     "date": "3/3/2019",
     "events": [
-      { "start": "12:00AM", "end": "1:00AM", "text": "Fun Activity" },
-      { "start": "1:00AM", "end": "2:00AM", "text": "Midnight Snack" },
+      { "start": "12:00AM", "end": "1:30AM", "text": "Mario Kart Competition" },
+      { "start": "3:00AM", "end": "4:00AM", "text": "Midnight Snack" },
       { "start": "7:00AM", "end": "8:00AM", "text": "Breakfast" },
-      { "start": "11:00AM", "text": "Submissions" },
-      { "start": "11:00AM", "end": "12:30PM", "text": "Presentations" },
-      { "start": "12:30PM", "end": "1:00PM", "text": "Awards" }
+      { "start": "9:00AM", "text": "Submission Deadline" },
+      { "start": "9:00AM", "end": "10:00AM", "text": "Breakfast" },
+      { "start": "10:00AM", "end": "11:00AM", "text": "IMC Java Workshop" },
+      { "start": "12:30PM", "end": "1:00PM", "text": "Awards Ceremony" }
     ]
   }
 ]
