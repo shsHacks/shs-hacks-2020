@@ -72,9 +72,21 @@ export default {
       this.cardHeight = this.$refs['events-container'][this.selectedDay].offsetHeight;
     },
     getEventContainerStyle(index) {
-      const translatePercent = (index - this.selectedDay) * 100;
+      // const translatePercent = (index - this.selectedDay) * 100;
+      let translateAmount = 0;
+      
+      if (this.$refs['events-container']) {
+        if (index < this.selectedDay) {
+          translateAmount = -this.$refs['events-container'][index].offsetHeight;
+        }
+        else {
+          for (let i = this.selectedDay; i < index; i++) {
+            translateAmount += this.$refs['events-container'][i].offsetHeight;
+          }
+        }
+      }
       return {
-        transform: `translateY(${translatePercent}%)`,
+        transform: `translateY(${translateAmount}px)`,
       };
     },
     setSmallCaps(timeString) {

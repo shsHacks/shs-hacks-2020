@@ -16,8 +16,7 @@
     "date": "3/3/2019",
     "events": [
       { "start": "12:00AM", "end": "1:30AM", "text": "Mario Kart Competition" },
-      { "start": "3:00AM", "end": "4:00AM", "text": "Midnight Snack" },
-      { "start": "7:00AM", "end": "8:00AM", "text": "Breakfast" },
+      { "start": "3:00AM", "end": "4:00AM", "text": "Snack" },
       { "start": "9:00AM", "text": "Submission Deadline" },
       { "start": "9:00AM", "end": "10:00AM", "text": "Breakfast" },
       { "start": "10:00AM", "end": "11:00AM", "text": "IMC Java Workshop" },
