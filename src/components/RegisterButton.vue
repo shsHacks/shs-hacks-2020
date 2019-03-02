@@ -1,6 +1,6 @@
 <template>
   <!-- <div class="register-button" @click="showRegisterPopup">Register Now</div>   -->
-  <div class="register-button closed">Registration Closed</div>
+  <a class="register-button" href="https://drive.google.com/open?id=0B-xfoNQMQy3FM0lKbkFWcGF3MXM">Useful Documents</a>
 </template>
 
 <script>
@@ -32,6 +32,7 @@ export default {
   display: block
   box-sizing: border-box
   cursor: pointer
+  text-decoration: none
   +mobile
     width: 225px
     font-size: 1.15em
