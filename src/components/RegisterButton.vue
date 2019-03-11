@@ -1,6 +1,6 @@
 <template>
   <!-- <div class="register-button" @click="showRegisterPopup">Register Now</div>   -->
-  <a class="register-button" href="https://drive.google.com/open?id=0B-xfoNQMQy3FM0lKbkFWcGF3MXM">Useful Documents</a>
+  <a class="register-button" href="https://drive.google.com/open?id=0B-xfoNQMQy3FM0lKbkFWcGF3MXM">Public Folder</a>
 </template>
 
 <script>
