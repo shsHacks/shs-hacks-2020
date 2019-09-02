@@ -117,7 +117,7 @@ export default {
   },
   components: {
     Top,
-    MyMenu: Menu, // menu is a reserved word
+    MyMenu: Menu, // menu is a reserved word (which is why we called it MyMenu)
     About,
     Location,
     Schedule,
