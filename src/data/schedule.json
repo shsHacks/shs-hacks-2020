@@ -1,0 +1,27 @@
+[
+    {
+      "date": "3/2/2019",
+      "events": [
+        { "start": "12:30PM", "end": "1:30PM", "text": "Arrival and Check-in" , "iam": 1},
+        { "start": "1:30PM", "end": "2:00PM", "text": "Opening Ceremony" , "iam": 2},
+        { "start": "2:00PM", "text": "Hacking Commences" },
+        { "start": "2:30PM", "end": "4:00PM", "text": "Stay tuned, don't miss this","iam": 3 },
+        { "start": "4:15PM", "end": "5:45PM", "text": "Stay tuned, don't miss this","iam": 4},
+        { "start": "6:00PM", "end": "7:00PM", "text": "Stay tuned, don't miss this","iam": 5 },
+        { "start": "8:00PM", "end": "9:00PM", "text": "Stay tuned, don't miss this", "iam": 6},
+        { "start": "9:15PM", "end": "10:45PM", "text": "Stay tuned, don't miss this","iam": 7 }
+      ]
+    },
+    {
+      "date": "3/3/2019",
+      "events": [
+        { "start": "12:00AM", "end": "1:30AM", "text": "Stay tuned, don't miss this","iam": 8 },
+        { "start": "3:00AM", "end": "4:00AM", "text": "Stay tuned, don't miss this" ,"iam": 9},
+        { "start": "9:00AM", "text": "Submission Deadline" ,"iam": 10},
+        { "start": "9:00AM", "end": "10:00AM", "text": "Stay tuned, don't miss this","iam": 11 },
+        { "start": "10:00AM", "end": "11:00AM", "text": "Stay tuned, don't miss this" ,"iam": 12},
+        { "start": "12:30PM", "end": "1:00PM", "text": "Awards Ceremony" ,"iam": 13}
+      ]
+    }
+  ]
+  

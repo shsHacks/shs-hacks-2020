@@ -23,7 +23,7 @@
         <p class = "centerme">Location</p>
       </div>
       <div id = "Schedule" class="filler">
-        <p class = "centerme">Schedule</p>
+        <schedule id ="schedule"/>
       </div>
       <div id = "Register" class="filler">
         <p class = "centerme">Register</p>
@@ -44,11 +44,11 @@
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-
+import Schedule from '@/sections/Schedule.vue';
 export default {
   name: 'app',
   components: {
-   
+   Schedule
   //HelloWorld
   }
 }
@@ -61,6 +61,7 @@ function scrollFunction() {
     document.getElementById("my-menu").style.top = "-50px";
   }
 }
+
 </script>
 
 <style>
