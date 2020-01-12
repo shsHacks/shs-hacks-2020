@@ -1,5 +1,9 @@
 # shshacks2020
-
+#Authors
+```
+Edward Kang 
+With a lot of appreciated help from Abhinav Pappu
+```
 ## Project setup
 ```
 npm install
