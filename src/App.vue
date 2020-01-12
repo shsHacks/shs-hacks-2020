@@ -23,7 +23,7 @@
         <p class = "centerme">Location</p>
       </div>
       <div id = "Schedule" class="filler">
-        <schedule id ="schedule"/>
+        <schedule id ="schedule" :scroll="contentScroll" :color ="colors.myGreen"/>
       </div>
       <div id = "Register" class="filler">
         <p class = "centerme">Register</p>
@@ -45,7 +45,17 @@
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
 import Schedule from '@/sections/Schedule.vue';
+import colors from '@/data/colors.json';
 export default {
+  data() {
+    return {
+      scroll: 0,
+      topHeight: 0,
+      menuHeight: 0,
+      primaryColor: '#275d38',
+      secondaryColor: '#c99700',
+      colors,
+    }},
   name: 'app',
   components: {
    Schedule
@@ -91,7 +101,7 @@ align-items: center;
 }
 #my-menu{
 
- z-index: 1; 
+ z-index: 20; 
   background-color: #333; /* Black background color */
   position: fixed; /* Make it stick/fixed */
   top: -50px; /* Hide the navbar 50 px outside of the top view */
