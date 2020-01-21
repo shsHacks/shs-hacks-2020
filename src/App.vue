@@ -76,6 +76,9 @@ export default {
   //HelloWorld
   }
 }
+document.body.onload = function(){
+  document.getElementById("menu-overlay").style.top = "-140px";
+};
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -84,9 +87,7 @@ function scrollFunction() {
   }
   
   else {
-    
     document.getElementById("menu-overlay").style.top = "-140px";
-
   }
   if(document.body.scrollTop>500 || document.documentElement.scrollTop>500)
   {
