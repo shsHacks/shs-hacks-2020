@@ -192,6 +192,10 @@ box-shadow: 0px 3px 5px 0px black;
   display: inline-block; 
   max-width: 75%; 
 }
+#Contact{
+  height: auto; 
+  margin-bottom: 0; 
+}
 
 @font-face {
 	font-family: 'Lato';

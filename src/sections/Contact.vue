@@ -38,10 +38,10 @@ export default {
 .contact
   height: 225px
   width: 100%
-  background-color: var(--primary-color)
+  background-color: #00c72b
   margin-top: 250px
   position: relative
-
+  margin-bottom: 0px; 
   .card
     $card-height: 310px
     +shadow-alt
