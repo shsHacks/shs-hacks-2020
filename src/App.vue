@@ -4,7 +4,6 @@
 
   <div id="app" style ="height: 100%; width: 100%; margin: 0; padding: 0px;">
   <homepage style = "width: 100%; height: 100%; top: 0; margin: 0px; padding: 0px;"></homepage>
- 
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
   <div id = "my-menu">
     
@@ -76,9 +75,9 @@ export default {
   //HelloWorld
   }
 }
-document.body.onload = function(){
-  document.getElementById("menu-overlay").style.top = "-140px";
-};
+
+
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -148,7 +147,7 @@ align-items: center;
   background-color: rgba(255,224,25, 0.75); 
   position: fixed; 
   z-index: 18;
-  top: 0px;  
+  top: -140px;  
   width: 100%; 
   -webkit-box-shadow: 0px 3px 5px 0px black;
 -moz-box-shadow: 0px 3px 5px 0px black;
