@@ -1,21 +1,10 @@
 <template>
   <div id="app" :style="appStyle">
     <div id="background"></div>
-    <register-popup :show="showRegisterPopup"/>
 
     <top ref="top" :menu-height="menuHeight"/>
-    <my-menu :sticky="menuSticky" @scroll="scrollTo($event)" ref="menu"/>
-
+    <!-- <div style="background-color: white; height: 200px"/> -->
     <div id="content">
-      <about id="about" :scroll="contentScroll" :color="primaryColor"/>
-      <location id="location" :scroll="contentScroll" :color="colors.blue"/>
-      <schedule id="schedule" :scroll="contentScroll" :color="colors.red"/>
-      <switch-by-device>
-        <faq id="faq" :scroll="contentScroll" :color="colors.teal" :num-columns="2"/>
-        <faq slot="mobile" id="faq" :scroll="contentScroll" :color="colors.teal" :num-columns="1"/>
-      </switch-by-device>
-      
-      <sponsors/>
       <contact id="contact"/>
     </div>
   </div>
@@ -51,8 +40,12 @@ export default {
   },
   created() {
     this.scroll = window.scrollY;
-
     window.addEventListener('scroll', () => this.scroll = window.scrollY);
+
+    setTimeout(() => {
+      FB.XFBML.parse();
+      FB.CustomerChat.show(false);
+    }, 500);
   },
   mounted() {
     this.setHeights();
@@ -79,8 +72,8 @@ export default {
   },
   methods: {
     setHeights() {
-      this.menuHeight = this.$refs['menu'].$el.offsetHeight;
-      this.topHeight = this.$refs['top'].$el.offsetHeight;
+      // this.menuHeight = this.$refs['menu'].$el.offsetHeight;
+      // this.topHeight = this.$refs['top'].$el.offsetHeight;
     },
     scrollTo(id) {
       // scroll to element (can't use browser's natural behavior because the fixed menu obstructs the top part of the selected section)
@@ -98,21 +91,21 @@ export default {
   },
   watch: {
     menuSticky() {
-      if (window.FB) { // make sure facebook sdk is loaded first
-        if (this.menuSticky) { // if the menu is sticky (fixed to the top), show the plugin
-          if (this.facebookXfbmlLoaded) {
-            FB.CustomerChat.show(false);
-          } else { // if the plugin has not been loaded yet (first load)
-            FB.XFBML.parse();
-            this.facebookXfbmlLoaded = true;
-          }
-        } else {
-          // don't need to hide plugin if it was never loaded in the first place
-          if (this.facebookXfbmlLoaded) {
-            FB.CustomerChat.hide();
-          }
-        }
-      }
+      // if (window.FB) { // make sure facebook sdk is loaded first
+      //   if (this.menuSticky) { // if the menu is sticky (fixed to the top), show the plugin
+      //     if (this.facebookXfbmlLoaded) {
+      //       FB.CustomerChat.show(false);
+      //     } else { // if the plugin has not been loaded yet (first load)
+      //       FB.XFBML.parse();
+      //       this.facebookXfbmlLoaded = true;
+      //     }
+      //   } else {
+      //     // don't need to hide plugin if it was never loaded in the first place
+      //     if (this.facebookXfbmlLoaded) {
+      //       FB.CustomerChat.hide();
+      //     }
+      //   }
+      // }
     }
   },
   components: {
@@ -146,7 +139,7 @@ body
   width: 100%
   height: 100%
   background-image: url('/assets/background.png')
-  background-size: 100% 100%
+  background-size: cover
   position: fixed
   top: 0
   left: 0
@@ -154,8 +147,8 @@ body
 
 #content
   width: 100%
-  background-color: white
+  background-color: var(--primary-color)
   overflow: hidden
-  padding-top: 25px
+  padding-top: 1px
 
 </style>

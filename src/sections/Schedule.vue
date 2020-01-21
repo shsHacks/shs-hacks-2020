@@ -7,7 +7,8 @@
           v-for="(day, index) in schedule"
           :class="{ selected: index === selectedDay }"
           :style="getTabStyle(index)"
-          @click="selectedDay = index">
+          @click="selectedDay = index"
+          :key="day.date">
           <switch-by-device>
             <span>{{ getDayString(day.date) }}</span>
             <span slot="mobile">{{ getDayStringMobile(day.date) }}</span>

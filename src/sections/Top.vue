@@ -1,10 +1,11 @@
 <template>
-  <div class="top" :class="{ 'shift-up': shiftUp }" :style="style">
+  <div class="top" :style="style">
     <div class="main-tab">
       <img class="logo" src="/assets/logo.png">
-      <div class="text">March 2nd – 3rd, 2019</div>
+      <div class="text">February 15th – 16th, 2020</div>
       <div class="text large">Adlai E. Stevenson High School</div>
-      <register-button class="register"/>
+      <!-- <register-button class="register"/> -->
+      <div class="fake-button">Coming Soon...</div>
     </div>
   </div>
 </template>
@@ -48,26 +49,24 @@ export default {
 
 .top
   width: 100%
+  height: 100vh
   position: relative
-  transition: height .6s
+  display: flex
+  justify-content: center
+  align-items: center
 
   .main-tab
-    --width: 600px
     +shadow-alt
-    width: var(--width)
+    width: 600px
     height: 400px
-    position: absolute
     background-color: white
-    bottom: 0
-    left: calc(50% - var(--width)/2)
-    border-top-left-radius: 20px
-    border-top-right-radius: 20px
+    border-radius: 15px
     display: flex
     flex-direction: column
     align-items: center
-    border-bottom: 5px solid var(--primary-color)
+    padding-top: 10px
     +mobile
-      --width: 90%
+      width: 90%
       height: 320px
 
     .logo
@@ -79,7 +78,7 @@ export default {
       color: rgba(0, 0, 0, 0.8)
       letter-spacing: .05em
       line-height: 175%
-      font-size: 1.25em
+      font-size: 1.2em
       +mobile
         font-size: .9em
 
@@ -88,7 +87,17 @@ export default {
         +mobile
           font-size: 1em
     
-    .register
+    .fake-button
       margin-top: 15px
+      font-size: 1.25em
+      font-weight: bold
+      color: var(--primary-color)
+      border: 2px solid var(--primary-color)
+      border-radius: 50px
+      width: 250px
+      text-align: center
+      line-height: 225%
+      letter-spacing: .05em
+      user-select: none
 
 </style>
