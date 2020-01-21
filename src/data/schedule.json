@@ -1,6 +1,6 @@
 [
     {
-      "date": "3/2/2019",
+      "date": "2/15/2020",
       "events": [
         { "start": "12:30PM", "end": "1:30PM", "text": "Arrival and Check-in" , "iam": 1},
         { "start": "1:30PM", "end": "2:00PM", "text": "Opening Ceremony" , "iam": 2},
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "date": "3/3/2019",
+      "date": "2/16/2020",
       "events": [
         { "start": "12:00AM", "end": "1:30AM", "text": "Stay tuned, don't miss this","iam": 8 },
         { "start": "3:00AM", "end": "4:00AM", "text": "Stay tuned, don't miss this" ,"iam": 9},

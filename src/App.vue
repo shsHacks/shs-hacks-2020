@@ -179,7 +179,6 @@ box-shadow: 0px 3px 5px 0px black;
 }
 
 #my-menu a:hover {
-  background-color: #ddd;
   color: blue;
 }
 .centerme{
