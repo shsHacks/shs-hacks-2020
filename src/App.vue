@@ -90,7 +90,7 @@ function scrollFunction() {
   }
   if(document.body.scrollTop>500 || document.documentElement.scrollTop>500)
   {
-document.getElementById("menu-overlay").style.backgroundColor= "rgba(255,224,25)";}
+document.getElementById("menu-overlay").style.backgroundColor= "rgba(255,224,25,1)";}
 else 
 {
   document.getElementById("menu-overlay").style.backgroundColor = "rgba(255,224,25, 0.75)";}
@@ -127,7 +127,7 @@ align-items: center;
  
 }
 #my-menu{
-  font-weight: normal; 
+  font-weight: bold; 
   display: flex; 
   justify-content: space-around;
   flex-flow: row wrap; 
@@ -141,7 +141,7 @@ align-items: center;
 }
 #menu-overlay{
   height: 8vh; 
-  font-weight: bold; 
+  font-weight: bold;   
   display: flex; 
   justify-content: space-around; 
   background-color: rgba(255,224,25, 0.75); 
