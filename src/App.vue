@@ -138,6 +138,7 @@ align-items: center;
   width: 100%; /* Full width */
   height: 10vh; 
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  transition: color 0.3s; 
 }
 #menu-overlay{
   height: 8vh; 
@@ -153,6 +154,7 @@ align-items: center;
 -moz-box-shadow: 0px 3px 5px 0px black;
 box-shadow: 0px 3px 5px 0px black;
   transition: top 0.3s;
+  transition: color 1s; 
 
 }
 .fixmenu a{
@@ -175,10 +177,11 @@ box-shadow: 0px 3px 5px 0px black;
   text-align: center;
   padding: 15px;
   text-decoration: none;
+
 }
 
 #my-menu a:hover {
-  color: blue;
+  color: #03ff39;
 }
 .centerme{
   position: relative; 

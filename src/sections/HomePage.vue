@@ -35,24 +35,25 @@ template {
   display: block;
   opacity: 0; 
   margin:0 auto;
-  padding-top: 10vh; 
+  padding-top: -200vh; 
   width: 40vw; 
   height: auto; 
   z-index: 1; 
   animation-name: showLogo; 
-  animation-duration: 2s; 
+  animation-duration: 1s; 
   animation-fill-mode: forwards; 
+  animation-delay: 2s;
 }
 /* Safari 4.0 - 8.0 */
-@keyframes showLogo {
-  from{opacity: 0; padding-top: 0vh;}
-  to {opacity: 1; padding-top: 10vh;}
+@-webkit-keyframes showLogo {
+   from  {opacity: 0.2; padding-top: -200vh;}
+ to {opacity: 1; padding-top: 10vh;}
 }
 
 /* Standard syntax */
 @keyframes showLogo {
-  from{opacity: 0; padding-top: 0vh;}
-  to {opacity: 1; padding-top: 10vh;}
+   from  {opacity: 0.2; padding-top: -200vh;}
+ to {opacity: 1; padding-top: 10vh;}
 }
 
 </style>
