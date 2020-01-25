@@ -11,6 +11,50 @@ export default {
 </script>
 
 <style>
+
+@font-face {
+	font-family: 'Lato';
+	src: url('~@/assets/fonts/Lato/Lato-Regular.ttf'); 
+	src: 
+		local('Lato-Regular'),
+		url('~@/assets/fonts/Lato/Lato-Regular.ttf') 
+		format('truetype');
+}
+/*bold version*/
+@font-face {
+	font-family: 'Lato';
+	src: url('~@/assets/fonts/Lato/Lato-Regular.ttf'); 
+	src: 
+		local('Lato-Bold'),
+		url('~@/assets/fonts/Lato/Lato-Regular.ttf') 
+		format('truetype');
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('~@/assets/fonts/OpenSans/OpenSans-Regular.ttf'); 
+	src: 
+		local('Opensans-Regular'),
+		url('~@/assets/fonts/OpenSans/OpenSans-Regular.ttf') 
+		format('truetype');
+}
+/*bold version*/
+@font-face {
+	font-family: 'OpenSans';
+	src: url('~@/assets/fonts/OpenSans/OpenSans-Bold.ttf'); 
+	src: 
+		local('OpenSans-Bold'),
+		url('~@/assets/fonts/OpenSans/OpenSans-Bold.ttf') 
+		format('truetype');
+	font-weight: bold;
+}
+div{
+  font-family: 'Lato';
+}
+h1{
+  font-size: 5vh; 
+  font-weight: bold; 
+}
 template {
   height: 100%;
   margin: 0px; 

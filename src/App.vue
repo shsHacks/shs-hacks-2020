@@ -7,7 +7,7 @@
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
   <div id = "my-menu">
     
-      <a href="#AboutHackathon">About shsHacks</a>
+      <a href="#AboutHackathonLink">About shsHacks</a>
       <a href="#Location">Location</a>
       <a href="#Schedule">Schedule</a>
       <a href="#Register">Register</a>
@@ -15,7 +15,7 @@
        <a href = "#Contact"> Contact Us</a>
   </div>
   <div id = "menu-overlay" class="fixmenu">
-     <a href="#AboutHackathon">About shsHacks</a>
+     <a href="#AboutHackathonLink">About shsHacks</a>
       <a href="#Location">Location</a>
       <a href="#Schedule">Schedule</a>
       <a href="#Register">Register</a>
@@ -23,9 +23,12 @@
        <a href = "#Contact"> Contact Us</a>
   </div>
     <div id = "theContent">
-      <div id = "AboutHackathon" class="filler">
-        <p class = "centerme">AboutHackathon</p>
-      </div>
+      <h1 id = "AboutHackathonLink">About shsHacks</h1>
+      <abouthackathon id = "AboutHackathon" class="filler"></abouthackathon>
+       <switch-by-device>
+        <faqs id="faq" :scroll="contentScroll" :color="colors.teal" :num-columns="2"/>
+        <faqs slot="mobile" id="faq" :scroll="contentScroll" :color="colors.teal" :num-columns="1"/>
+      </switch-by-device>
      <location id="Location" :scroll="contentScroll" :color="colors.blue" class ="filler"/>
       <div id = "Schedule">
         <schedule id ="schedule" :scroll="contentScroll" :color ="colors.myGreen" class = "filler"/>
@@ -37,7 +40,7 @@
         <p class = "centerme">Sponsors</p>
       </div>
       <div id = "AboutUs" class="filler">
-        <p class = "centerme">AboutUs</p>
+        <p class = "centerme">Team member profiles currently being updated...</p>
       </div>
       <div id = "Contact" class="filler">
         <contact></contact>
@@ -55,6 +58,8 @@ import colors from '@/data/colors.json';
 import homepage from '@/sections/HomePage.vue';
 import Location from '@/sections/Location.vue';
 import Contact from '@/sections/Contact.vue';
+import abouthackathon from '@/sections/AboutHackathon.vue';
+import faqs from '@/components/FaqQuestions.vue'; 
 export default {
 
   data() {
@@ -71,7 +76,9 @@ export default {
    Schedule, 
    homepage, 
    Location, 
-   Contact
+   Contact, 
+   abouthackathon, 
+   faqs
   //HelloWorld
   }
 }
@@ -122,12 +129,12 @@ else
 .filler{
 width: 100%; 
 height: 100vh;
-font-size: 22px; 
+font-size: 3vh; 
 align-items: center;
  
 }
 #my-menu{
-  font-weight: bold; 
+  font-weight: normal; 
   display: flex; 
   justify-content: space-around;
   flex-flow: row wrap; 
@@ -142,7 +149,7 @@ align-items: center;
 }
 #menu-overlay{
   height: 8vh; 
-  font-weight: bold;   
+  font-weight: normal;   
   display: flex; 
   justify-content: space-around; 
   background-color: rgba(255,224,25, 0.75); 
@@ -209,10 +216,10 @@ box-shadow: 0px 3px 5px 0px black;
 /*bold version*/
 @font-face {
 	font-family: 'Lato';
-	src: url('~@/assets/fonts/Lato/Lato-Regular.ttf'); 
+	src: url('~@/assets/fonts/Lato/Lato-Bold.ttf'); 
 	src: 
 		local('Lato-Bold'),
-		url('~@/assets/fonts/Lato/Lato-Regular.ttf') 
+		url('~@/assets/fonts/Lato/Lato-Bold.ttf') 
 		format('truetype');
 	font-weight: bold;
 }
@@ -223,6 +230,7 @@ box-shadow: 0px 3px 5px 0px black;
 		local('Opensans-Regular'),
 		url('~@/assets/fonts/OpenSans/OpenSans-Regular.ttf') 
 		format('truetype');
+  font-weight: normal; 
 }
 /*bold version*/
 @font-face {
@@ -232,9 +240,13 @@ box-shadow: 0px 3px 5px 0px black;
 		local('OpenSans-Bold'),
 		url('~@/assets/fonts/OpenSans/OpenSans-Bold.ttf') 
 		format('truetype');
-	font-weight: bold;
+    font-weight: bold;
 }
 div{
   font-family: 'Lato';
+}
+h1{
+  font-size: 5vh; 
+  font-weight: bold; 
 }
 </style>
