@@ -23,12 +23,9 @@
        <a href = "#Contact"> Contact Us</a>
   </div>
     <div id = "theContent">
-      <h1 id = "AboutHackathonLink">About shsHacks</h1>
-      <abouthackathon id = "AboutHackathon" class="filler"></abouthackathon>
-       <switch-by-device>
-        <faqs id="faq" :scroll="contentScroll" :color="colors.teal" :num-columns="2"/>
-        <faqs slot="mobile" id="faq" :scroll="contentScroll" :color="colors.teal" :num-columns="1"/>
-      </switch-by-device>
+      <h1 id = "AboutHackathonLink" style = "text-decoration: underline;">About shsHacks</h1>
+      <abouthackathon id = "AboutHackathon"></abouthackathon>
+      <faq id ="faq"></faq> 
      <location id="Location" :scroll="contentScroll" :color="colors.blue" class ="filler"/>
       <div id = "Schedule">
         <schedule id ="schedule" :scroll="contentScroll" :color ="colors.myGreen" class = "filler"/>
@@ -37,7 +34,7 @@
         <p class = "centerme">Register</p>
       </div>
       <div id = "Sponsors" class="filler">
-        <p class = "centerme">Sponsors</p>
+        <p class = "centerme">The Sponsors section is currently being updated...</p>
       </div>
       <div id = "AboutUs" class="filler">
         <p class = "centerme">Team member profiles currently being updated...</p>
@@ -59,7 +56,7 @@ import homepage from '@/sections/HomePage.vue';
 import Location from '@/sections/Location.vue';
 import Contact from '@/sections/Contact.vue';
 import abouthackathon from '@/sections/AboutHackathon.vue';
-import faqs from '@/components/FaqQuestions.vue'; 
+import faq from '@/sections/Faq.vue'; 
 export default {
 
   data() {
@@ -69,7 +66,7 @@ export default {
       menuHeight: 0,
       primaryColor: '#275d38',
       secondaryColor: '#c99700',
-      colors,
+      colors
     }},
   name: 'app',
   components: {
@@ -78,7 +75,7 @@ export default {
    Location, 
    Contact, 
    abouthackathon, 
-   faqs
+   faq
   //HelloWorld
   }
 }
@@ -118,8 +115,8 @@ else
   margin-top: 100vh;
 }
 
-#theContent{
-  margin-top:30em; 
+#theContent{ 
+  margin-top: 10em; 
   width: 100%; 
   height: auto; 
   display: flex; 
