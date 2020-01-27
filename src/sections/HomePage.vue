@@ -112,7 +112,7 @@ template {
 
   position: absolute; 
   opacity: 0; 
-  margin:0 auto;
+  margin:0;
   right: 0vw;
   width: 40vw;
   top: -webkit-calc(53vh + 100px);

@@ -16,9 +16,9 @@ export default {
 #register{
     display: flex; 
     flex-direction: row wrap; 
+    flex-flow: space-around; 
 }
 a{
-    font-size: 3vh; 
-    margin: 10vh; 
+    font-size: 3vh;  
 }
 </style>
