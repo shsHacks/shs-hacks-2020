@@ -1,11 +1,18 @@
 <template>
   <div id ="bg">
+    
     <img src = "@/assets/logo.png" id="thelogo"/>
-  </div>
+     <img src = "@/assets/schoolBus.png" id = "bus"/>
+       </div>
+  
 </template>
 
 <script>
+
 export default {
+
+
+
 
 }
 </script>
@@ -76,18 +83,50 @@ template {
   z-index: -1;
 }
 #thelogo{
-  display: block;
+  display:block;
   opacity: 0; 
   margin:0 auto;
   padding-top: -200vh; 
   width: 40vw; 
   height: auto; 
-  z-index: 1; 
+  position: relative;
+  z-index: 2; 
   animation-name: showLogo; 
   animation-duration: 1s; 
   animation-fill-mode: forwards; 
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
+
+@-webkit-keyframes showBus{
+   from  {opacity: 0.2; right: 0vw; }
+ to {opacity: 1; right: 30vw;}
+}
+
+/* Standard syntax */
+@keyframes showBus {
+   from  {opacity: 0.2; right: 0vw; }
+ to {opacity: 1; right: 15vw;}
+}
+/* Standard syntax */
+#bus{ 
+
+  position: absolute; 
+  opacity: 0; 
+  margin:0 auto;
+  right: 0vw;
+  width: 40vw;
+  top: -webkit-calc(53vh + 100px);
+  top: calc(53vh + 100px); 
+  height: auto; 
+  z-index: 1; 
+  animation-name: showBus; 
+  animation-duration: 1s; 
+  animation-fill-mode: forwards; 
+  animation-delay: 1.5s;
+
+
+}
+
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes showLogo {
    from  {opacity: 0.2; padding-top: -200vh;}
@@ -98,6 +137,37 @@ template {
 @keyframes showLogo {
    from  {opacity: 0.2; padding-top: -200vh;}
  to {opacity: 1; padding-top: 10vh;}
+}
+@media screen and (max-width: 1500px)
+{
+#thelogo{
+
+  width: 60vw;
+}
+
+}
+@media screen and (max-width: 430px)
+{
+  @-webkit-keyframes showLogo {
+   from  {opacity: 0.2; padding-top: -200vh;}
+ to {opacity: 1; padding-top: 20vh;}}
+/* Standard syntax */
+@keyframes showLogo {
+   from  {opacity: 0.2; padding-top: -200vh;}
+ to {opacity: 1; padding-top: 20vh;}
+
+
+}
+
+
+}
+@media screen and (min-width: 1109)
+{
+  #bus{
+     top: -webkit-calc(63vh + 100px);
+  top: calc(63vh + 100px); 
+  }
+
 }
 
 </style>

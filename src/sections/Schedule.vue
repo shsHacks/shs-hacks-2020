@@ -206,7 +206,7 @@ export default {
 
         .text
           display: inline-block
-          font-size: 1.2em
+          font-size: 1.0em
           width: calc(100% - var(--time-width))
           padding-left: 20px
           box-sizing: border-box
@@ -214,6 +214,5 @@ export default {
           +mobile
             padding-left: 10px
 
-      
 </style>
 

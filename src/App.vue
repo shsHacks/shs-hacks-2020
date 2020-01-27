@@ -5,6 +5,7 @@
   <div id="app" style ="height: 100%; width: 100%; margin: 0; padding: 0px;">
   <homepage style = "width: 100%; height: 100%; top: 0; margin: 0px; padding: 0px;"></homepage>
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
+  
   <div id = "my-menu">
     
       <a href="#AboutHackathonLink">About shsHacks</a>
@@ -30,9 +31,9 @@
       <div id = "Schedule">
         <schedule id ="schedule" :scroll="contentScroll" :color ="colors.myGreen" class = "filler"/>
       </div>
-      <div id = "Register" class="filler">
-        <p class = "centerme">Register</p>
-      </div>
+    
+        <register></register>
+      
       <div id = "Sponsors" class="filler">
         <p class = "centerme">The Sponsors section is currently being updated...</p>
       </div>
@@ -57,6 +58,7 @@ import Location from '@/sections/Location.vue';
 import Contact from '@/sections/Contact.vue';
 import abouthackathon from '@/sections/AboutHackathon.vue';
 import faq from '@/sections/Faq.vue'; 
+import register from '@/sections/Register.vue';
 export default {
 
   data() {
@@ -75,7 +77,8 @@ export default {
    Location, 
    Contact, 
    abouthackathon, 
-   faq
+   faq, 
+   register
   //HelloWorld
   }
 }
@@ -161,6 +164,7 @@ box-shadow: 0px 3px 5px 0px black;
   transition: color 1s; 
 
 }
+
 .fixmenu a{
 
   visibility: hidden; 
@@ -245,5 +249,20 @@ div{
 h1{
   font-size: 5vh; 
   font-weight: bold; 
+}
+@media screen and (max-width: 899px)
+{
+  #my-menu{
+    display: none; 
+  }
+  #menu-overlay{
+    display: none; 
+  }
+  #my-menu a{
+    display: none; 
+  }
+  .fixmenu a{
+    display: none;
+  }
 }
 </style>
