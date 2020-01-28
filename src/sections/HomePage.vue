@@ -83,7 +83,7 @@ template {
   -moz-background-size: cover; 
   -o-background-size: cover; 
    background-position: center center;
-  background-attachment: fixed; 
+  background-attachment: scroll; 
   z-index: -1;
 }
 #thelogo{
