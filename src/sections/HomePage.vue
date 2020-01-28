@@ -63,6 +63,7 @@ h1{
 }
 template {
   height: 100%;
+  width: 100%;
   margin: 0px; 
   padding: 0px; 
   top: 0px; 
@@ -72,8 +73,9 @@ template {
   margin: 0; 
   padding: 0; 
   border: 0; 
-  top: 0px; 
+  top: 0px;  
   height: 100%; 
+  width: 100%; 
   background-image: url("~@/assets/background1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
