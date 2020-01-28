@@ -75,10 +75,12 @@ template {
   border: 0; 
   top: 0px; 
   background-image: url("~@/assets/background1.jpg");
-  height: 100%;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+   background-position: left top;
   background-attachment: fixed; 
   z-index: -1;
 }
