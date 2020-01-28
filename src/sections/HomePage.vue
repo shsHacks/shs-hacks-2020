@@ -74,8 +74,8 @@ template {
   padding: 0; 
   border: 0; 
   top: 0px;  
-  height: 100%; 
-  width: 100%; 
+  min-height: 100%; 
+  min-width: 100%; 
   background-image: url("~@/assets/background1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
