@@ -1,6 +1,6 @@
 <template>
-  <div id = "home">
-    <img id = "bg" src = "@/assets/background1.jpg"/>
+  <div id ="bg">
+    
     <img src = "@/assets/logo.png" id="thelogo"/>
      <img src = "@/assets/schoolBus.png" id = "bus"/>
        </div>
@@ -67,23 +67,21 @@ template {
   padding: 0px; 
   top: 0px; 
 }
-#home{
-   margin: 0; 
-  padding: 0; 
-  border: 0; 
-  left: 0; 
-  top: 0px; 
-  height: 100%; 
-}
+
 #bg {
-  position: absolute; 
   margin: 0; 
   padding: 0; 
   border: 0; 
-  left: 0; 
   top: 0px; 
   height: 100%; 
-  width: auto; 
+  background-image: url("~@/assets/background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+   background-position: center center;
+  background-attachment: fixed; 
   z-index: -1;
 }
 #thelogo{
