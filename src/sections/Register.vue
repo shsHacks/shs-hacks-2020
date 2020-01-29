@@ -14,6 +14,7 @@ export default {
 
 <style scoped>
 #register{
+    margin-top: 10vh; 
     display: flex; 
     flex-direction: row wrap; 
     flex-flow: space-around; 
