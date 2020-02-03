@@ -29,10 +29,10 @@
       <faq id ="faq"></faq> 
      <location id="Location" :scroll="contentScroll" :color="colors.blue" class ="filler"/>
       <div id = "Schedule">
-        <schedule id ="schedule" :scroll="contentScroll" :color ="colors.myGreen" class = "filler"/>
+        <schedule id ="Schedule" :scroll="contentScroll" :color ="colors.myGreen" class = "filler"/>
       </div>
-    
-        <register></register>
+        <h1 id = "Register"></h1>
+        <register id ="register"></register>
       
       <div id = "Sponsors" class="filler">
         <p class = "centerme">The Sponsors section is currently being updated...</p>
@@ -200,7 +200,7 @@ box-shadow: 0px 3px 5px 0px black;
   left: 50%; 
    transform: translate(-50%, -50%);
 }
-#schedule{
+#Schedule{
   display: inline-block; 
   max-width: 75%; 
 }
