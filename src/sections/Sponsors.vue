@@ -24,12 +24,12 @@ export default {
              { 
                  return {
                
-             width: '60vw'};}
+             width: '40vw'};}
              else 
              {
                  
                  return {
-                     width: '30vh'
+                     width: '50vw'
                  };
              }
          }, 
@@ -40,11 +40,11 @@ export default {
          size: function() {
              if(!this.mobileVersion)
              {return {
-             width: '40vw'};}
+             width: '30vw'};}
              else 
              {
                  return {
-                     width: '20vh'
+                     width: '40vh'
                  };
              }
          }, 
