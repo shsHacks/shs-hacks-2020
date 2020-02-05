@@ -29,14 +29,12 @@
       <faq id ="faq"></faq> 
      <location id="Location" :scroll="contentScroll" :color="colors.blue" class ="filler"/>
       <div id = "Schedule">
-        <schedule id ="Schedule" :scroll="contentScroll" :color ="colors.myGreen" class = "filler"/>
+        <schedule id ="Schedule" :scroll="contentScroll" :color ="colors.myGreen"/>
       </div>
         <h1 id = "Register"></h1>
         <register id ="register"></register>
       
-      <div id = "Sponsors" class="filler">
-        <p class = "centerme">The Sponsors section is currently being updated...</p>
-      </div>
+      <Sponsors id = "sponsor"></Sponsors>
       <div id = "AboutUs" class="filler">
         <p class = "centerme">Team member profiles currently being updated...</p>
       </div>
@@ -51,6 +49,7 @@
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
+import Sponsors from '@/sections/Sponsors.vue';
  import Schedule from '@/sections/Schedule.vue';
 import colors from '@/data/colors.json';
 import homepage from '@/sections/HomePage.vue';
@@ -78,7 +77,8 @@ export default {
    Contact, 
    abouthackathon, 
    faq, 
-   register
+   register, 
+   Sponsors
   //HelloWorld
   }
 }
@@ -202,7 +202,7 @@ box-shadow: 0px 3px 5px 0px black;
 }
 #Schedule{
   display: inline-block; 
-  max-width: 75%; 
+  max-width: 95%; 
 }
 #Contact{
   height: auto; 
@@ -268,6 +268,8 @@ h1{
     display: none;
   }
 }
-
+#sponsor{
+  margin-top: 20vh; 
+}
 
 </style>

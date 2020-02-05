@@ -80,10 +80,20 @@ export default {
   float: right;
 }
 
+
 p {
   flex: 50%;
   font-size: 3vh;
   text-align: left;
   margin-left: 10vw;
+}
+@media screen and (max-width: 696px)
+{
+  #slideshow{
+    width: 40vw; 
+  }
+ p{
+   margin-left: 5vw; 
+ }
 }
 </style>
