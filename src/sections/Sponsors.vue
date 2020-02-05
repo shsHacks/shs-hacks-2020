@@ -83,6 +83,11 @@ h1{
 }
 .everylogo{
    
- 
+ width: 50%;
+}
+@media screen and (max-width: 500px)
+{
+    .everylogo{
+    width: 70%;} 
 }
 </style>
