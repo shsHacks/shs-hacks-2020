@@ -3,8 +3,10 @@
 
 <h1><u><b>Our Sponsors</b></u></h1>
 <div id = "logos">
+    
 <div v-for="image in images" :key="image.id" :style="image.size">
-<img :src="image.source" class = "everylogo"/>
+<a :href="image.ref" target="_blank">
+<img :src="image.source" class = "everylogo"/></a>
 </div>
 </div>
   </div>
@@ -32,7 +34,8 @@ export default {
                      width: '80vh'
                  };
              }
-         }}, 
+         }, 
+         ref: 'https://digitalocean.com/'}, 
          {source: 
          '../../sponsorlogos/1Password.png',
          id: 1 ,
@@ -46,7 +49,8 @@ export default {
                      width: '90vh'
                  };
              }
-         }
+         }, 
+         ref: 'https://1password.com/'
          
          }]
       };
