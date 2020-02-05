@@ -13,25 +13,23 @@
 </template>
 
 <script>
-var mobileVersion = false; 
 
-if(window.innerHeight>window.innerWidth)
-{
-mobileVersion = true; 
-}
 export default {
   data(){
       return {
          images: [{source: '../../sponsorlogos/DigitalOcean.png',
          id: 0, 
-         size: function() {
-             if(!mobileVersion)
-             {return {
+         size: ()=> {
+             if(!this.mobileVersion)
+             { 
+                 return {
+               
              width: '60vw'};}
              else 
              {
+                 
                  return {
-                     width: '80vh'
+                     width: '30vh'
                  };
              }
          }, 
@@ -40,20 +38,31 @@ export default {
          '../../sponsorlogos/1Password.png',
          id: 1 ,
          size: function() {
-             if(!mobileVersion)
+             if(!this.mobileVersion)
              {return {
              width: '40vw'};}
              else 
              {
                  return {
-                     width: '90vh'
+                     width: '20vh'
                  };
              }
          }, 
          ref: 'https://1password.com/'
          
-         }]
+         }], 
+         mobileVersion: false
       };
+  }, 
+  mounted(){
+     
+
+
+if(window.innerHeight>window.innerWidth)
+{
+   
+this.mobileVersion = true; 
+}
   }
 }
 </script>
@@ -73,7 +82,7 @@ h1{
 
 }
 .everylogo{
-    width: 50%; 
+   
  
 }
 </style>
