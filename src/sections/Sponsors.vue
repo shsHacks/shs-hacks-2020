@@ -50,7 +50,13 @@ export default {
          }, 
          ref: 'https://1password.com/'
          
-         }], 
+         }, 
+         {
+             source: '../../sponsorlogos/BCDV.png', 
+             ref: 'https://www.bcdvideo.com/', 
+             id: 2
+         }
+         ], 
          mobileVersion: false
       };
   }, 
