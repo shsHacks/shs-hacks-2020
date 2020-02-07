@@ -9,8 +9,8 @@
 
     <div class="icons">
       <a href="mailto:contact@shshacks.io" target="_blank"><font-awesome-icon class="icon" :icon="faEnvelope"/></a>
-      <a href="https://www.facebook.com/shshacks2019/" target="_blank"><font-awesome-icon class="icon" :icon="faFacebookSquare"/></a>
-      <a href="https://www.instagram.com/shshacks2019/" target="_blank"><font-awesome-icon class="icon" :icon="faInstagram"/></a>
+      <a href="https://www.facebook.com/shshacks2020/" target="_blank"><font-awesome-icon class="icon" :icon="faFacebookSquare"/></a>
+      <a href="https://www.instagram.com/shshacks2020/" target="_blank"><font-awesome-icon class="icon" :icon="faInstagram"/></a>
     </div>
   </div>
 </template>
