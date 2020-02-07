@@ -7,6 +7,7 @@
 <div v-for="image in images" :key="image.id" :style="image.size">
 <a :href="image.ref" target="_blank">
 <img :src="image.source" class = "everylogo"/></a>
+
 </div>
 </div>
   </div>
@@ -81,19 +82,30 @@ h1{
 #logos{
     margin-top: 20vh; 
     display: flex; 
-    flex-direction: row wrap; 
-    width: 100%; 
-    justify-content: space-around; 
-    align-content: space-around; 
-
-}
-.everylogo{
    
- width: 50%;
+    flex-direction: row wrap; 
+    max-width: 100%; 
+    justify-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.everylogo{
+
+ width: 85%;
 }
 @media screen and (max-width: 500px)
 {
+   
     .everylogo{
-    width: 70%;} 
+    width: 80%;
+    margin-left: 10%; 
+    margin-right: 10%; 
+    } 
+     #logos{
+         flex-direction: row wrap;
+         justify-items: center;
+    justify-content: space-around;
+    }
 }
 </style>
