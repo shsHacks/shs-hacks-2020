@@ -12,14 +12,14 @@
       <a href="#Location">Location</a>
       <a href="#Schedule">Schedule</a>
       <a href="#Register">Register</a>
-      <a href = "#AboutUs"> Meet the Team</a>
+      <a href = "#sponsor"> Sponsors</a>
        <a href = "#Contact"> Contact Us</a>
   </div>
   <div id = "menu-overlay" class="fixmenu">
      <a href="#AboutHackathonLink">About shsHacks</a>
       <a href="#Location">Location</a>
       <a href="#Schedule">Schedule</a>
-      <a href="#Register">Register</a>
+      <a href="#sponsor">Sponsors</a>
       <a href = "#AboutUs"> Meet the Team</a>
        <a href = "#Contact"> Contact Us</a>
   </div>
@@ -35,9 +35,6 @@
         <register id ="register"></register>
       
       <Sponsors id = "sponsor"></Sponsors>
-      <div id = "AboutUs" class="filler">
-        <p class = "centerme">Team member profiles currently being updated...</p>
-      </div>
       <div id = "Contact" class="filler">
         <contact></contact>
       </div>

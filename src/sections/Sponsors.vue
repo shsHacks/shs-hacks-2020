@@ -24,9 +24,23 @@
 export default {
   data(){
       return {
-         images: [{source: '../../sponsorlogos/DigitalOcean.png',
+         images: [
+             
+               {
+                   source: '../../sponsorlogos/imc.png',
+             ref: 'https://www.imc.com/us/',
+             id: 3, 
+              size: 'big'
+              },
+                {
+                   source: '../../sponsorlogos/c2.png',
+             ref: 'https://www.c2educate.com/',
+             id: 3, 
+              size: 'big'
+              },
+             {source: '../../sponsorlogos/DigitalOcean.png',
          id: 0, 
-         size: 'big',
+         size: 'medium',
         //  size: ()=> {
         //      if(!this.mobileVersion)
         //      { 
@@ -64,27 +78,34 @@ export default {
              source: '../../sponsorlogos/BCDV.png', 
              ref: 'https://www.bcdvideo.com/', 
              id: 2, 
-              size: 'big'
+              size: 'medium'
          }, 
          {
              source: '../../sponsorlogos/github.png',
              ref: 'https://github.com/',
              id: 3, 
-              size: 'small'
+              size: 'supersmall'
               }, 
                {
              source: '../../sponsorlogos/stickermule.png',
-             ref: 'https://github.com/',
+             ref: 'https://www.stickermule.com/',
+             id: 4, 
+              size: 'medium'
+              }, 
+               
+              {
+                   source: '../../sponsorlogos/wolfram.png',
+             ref: 'https://www.wolfram.com/',
              id: 3, 
               size: 'medium'
               }, 
                 {
-             source: '../../sponsorlogos/wolfram.png',
-             ref: 'https://github.com/',
+                   source: '../../sponsorlogos/Cloud.png',
+             ref: 'https://cloudsploit.com/',
              id: 3, 
               size: 'medium'
               }
-         
+              
          ]
       };
   },
@@ -107,6 +128,13 @@ h1{
     justify-content: space-around;
    
 }
+.supersmall{
+      margin: 3vw;  
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8vw;
+}
 .small{
   margin: 3vw;  
      display: flex;
@@ -127,13 +155,17 @@ h1{
      display: flex;
     align-items: center;
     justify-content: center;
-    width: 20vw;
+    width: 23vw;
 }
 img{
     width: 100%;
 }
 @media screen and (max-width: 1300px)
 {
+    .supersmall
+    {
+        width: 15vw; 
+    }
     .small{
   margin: 2vw;  
      display: flex;
@@ -154,7 +186,7 @@ img{
      display: flex;
     align-items: center;
     justify-content: center;
-    width: 30vw;
+    width: 33vw;
 }
 #logos{
     margin-top: 15vh; 
@@ -162,6 +194,10 @@ img{
 }
 @media screen and (max-width: 560px)
 {
+    .supersmall
+    {
+        width: 20vw; 
+    }
     .small{
   margin: 2vw;  
      display: flex;
@@ -182,7 +218,7 @@ img{
      display: flex;
     align-items: center;
     justify-content: center;
-    width: 40vw;
+    width: 43vw;
 }
 #logos{
     margin-top: 5vh; 
