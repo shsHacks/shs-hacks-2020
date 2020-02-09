@@ -2,7 +2,9 @@
   <div id="shsHacksAbout">
     <div>
       <div id="right">
-        <img v-bind:src="image" id="slideshow" />
+      
+        <img v-bind:src="image" id="slideshow"/>
+     
         <a
           href="https://drive.google.com/drive/folders/1-EZcs_Zz4tR8yeesqDO_MdkRvBeOaltM"
           style="text-decoration: underline; color: blue;"
@@ -36,17 +38,22 @@ const sources = importAll(
 export default {
   data() {
     return {
+     
       image: sources[2]
     };
   },
   mounted() {
     var source = 2;
     const changeSlide = () => {
+
+   
       this.image = sources[source];
+          
       source += 1;
       if (source === 6) {
         source = 0;
       }
+      
     }
 
     window.setInterval(function() {
@@ -59,7 +66,6 @@ export default {
 <style scoped>
 #slideshow {
   object-fit: contain;
-
   width: 30vw;
   top: 0;
   margin: 0;
@@ -87,6 +93,9 @@ p {
   text-align: left;
   margin-left: 10vw;
 }
+
+
+
 @media screen and (max-width: 696px)
 {
   #slideshow{
