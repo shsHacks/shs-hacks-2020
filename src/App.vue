@@ -8,12 +8,12 @@
   
   <div id = "my-menu">
     
-      <a href="#AboutHackathonLink">About shsHacks</a>
-      <a href="#Location">Location</a>
-      <a href="#Schedule">Schedule</a>
+      <a href="#AboutHackathonLink" class ="nomore">About shsHacks</a>
+      <a href="#Location" >Location</a>
+      <a href="#Schedule" >Schedule</a>
       <a href="#Register">Register</a>
-      <a href = "#sponsor"> Sponsors</a>
-       <a href = "#Contact"> Contact Us</a>
+      <a href = "#sponsor" class ="nomore"> Sponsors</a>
+       <a href = "#Contact" class ="nomore"> Contact Us</a>
   </div>
   <div id = "menu-overlay" class="fixmenu">
      <a href="#AboutHackathonLink">About shsHacks</a>
@@ -252,16 +252,11 @@ h1{
 }
 @media screen and (max-width: 686px)
 {
-  #my-menu{
+
+  #my-menu a.nomore{
     display: none; 
   }
-  #menu-overlay{
-    display: none; 
-  }
-  #my-menu a{
-    display: none; 
-  }
-  .fixmenu a{
+  .fixmenu a.nomore{
     display: none;
   }
 }
