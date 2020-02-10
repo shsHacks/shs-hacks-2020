@@ -8,13 +8,11 @@
 </template>
 
 <script>
-window.onscroll = function() {scrollFunction()};
+setTimeout(function(){
+  window.addEventListener('scroll', function(){document.getElementById('bus').classList.add("out");});
+  
+}, 2500);
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("bus").classList.add("out");
-  }
-}
 export default {
 
 
@@ -108,38 +106,41 @@ template {
   animation-fill-mode: forwards; 
   animation-delay: 1s;
 }
-
+/*
 @-webkit-keyframes showBus{
    from  {opacity: 0.2; right: 0vw; }
  to {opacity: 1; right: 30vw;}
 }
 
-/* Standard syntax */
 @keyframes showBus {
    from  {opacity: 0.2; right: 0vw; }
  to {opacity: 1; right: 15vw;}
 }
-.out{
-   animation-name: destroyBus; 
-  animation-duration: 1s; 
-  animation-fill-mode: forwards; 
-  animation-delay: 0.2s;
-}
+*/
 @-webkit-keyframes destroyBus{
-   from  {opacity: 1; right: 30vw; }
+   from  {opacity: 1; right: 0vw; }
  to {opacity: 0; right: 100vw;}
 }
 
 /* Standard syntax */
 @keyframes destroyBus {
-   from  {opacity:1; right: 30vw; }
+   from  {opacity:1; right: 0vw; }
  to {opacity: 0; right: 100vw;}
 }
+.out{
+
+   animation-name: destroyBus; 
+  animation-duration: 1s; 
+  animation-fill-mode: forwards; 
+  animation-delay: 0.2s;
+
+}
+
 /* Standard syntax */
 #bus{ 
-
+  
   position: absolute; 
-  opacity: 0; 
+  opacity: 1; 
   margin:0;
   right: 0vw;
   width: 40vw;
@@ -147,10 +148,10 @@ template {
   top: calc(53vh + 100px); 
   height: auto; 
   z-index: 1; 
-  animation-name: showBus; 
+ /* animation-name: showBus; 
   animation-duration: 1s; 
   animation-fill-mode: forwards; 
-  animation-delay: 1.5s;
+  animation-delay: 1.5s;*/
 
 
 }
