@@ -250,7 +250,7 @@ h1{
   font-size: 5vh; 
   font-weight: bold; 
 }
-@media screen and (max-width: 899px)
+@media screen and (max-width: 686px)
 {
   #my-menu{
     display: none; 

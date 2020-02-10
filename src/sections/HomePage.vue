@@ -8,12 +8,20 @@
 </template>
 
 <script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("bus").classList.add("out");
+  }
+}
 export default {
 
 
 
 
 }
+
 </script>
 
 <style>
@@ -110,6 +118,22 @@ template {
 @keyframes showBus {
    from  {opacity: 0.2; right: 0vw; }
  to {opacity: 1; right: 15vw;}
+}
+.out{
+   animation-name: destroyBus; 
+  animation-duration: 1s; 
+  animation-fill-mode: forwards; 
+  animation-delay: 0.2s;
+}
+@-webkit-keyframes destroyBus{
+   from  {opacity: 1; right: 30vw; }
+ to {opacity: 0; right: 100vw;}
+}
+
+/* Standard syntax */
+@keyframes destroyBus {
+   from  {opacity:1; right: 30vw; }
+ to {opacity: 0; right: 100vw;}
 }
 /* Standard syntax */
 #bus{ 
