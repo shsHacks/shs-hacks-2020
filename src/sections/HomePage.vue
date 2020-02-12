@@ -8,10 +8,9 @@
 </template>
 
 <script>
-setTimeout(function(){
+
   window.addEventListener('scroll', function(){document.getElementById('bus').classList.add("out");});
   
-}, 2500);
 
 export default {
 
@@ -130,7 +129,7 @@ template {
 .out{
 
    animation-name: destroyBus; 
-  animation-duration: 1s; 
+  animation-duration: 1.5s; 
   animation-fill-mode: forwards; 
   animation-delay: 0.2s;
 
