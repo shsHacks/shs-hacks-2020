@@ -131,7 +131,7 @@ template {
    animation-name: destroyBus; 
   animation-duration: 1.5s; 
   animation-fill-mode: forwards; 
-  animation-delay: 0.2s;
+  animation-delay: 0s;
 
 }
 
