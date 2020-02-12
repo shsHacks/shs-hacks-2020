@@ -93,7 +93,7 @@ function scrollFunction() {
   else {
     document.getElementById("menu-overlay").style.top = "-140px";
   }
-  if(document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
   {
     if(  !document.getElementById("widen").classList.contains("wider")){
     document.getElementById("widen").classList.add("wider");
@@ -365,6 +365,20 @@ animation-fill-mode: forwards;
 @keyframes thin{
    from {display: flex; width: 30vw;} 
  to { width: 0vw; }
+}
+.wider{
+ 
+animation-name: widener; 
+ animation-delay: 0s;
+animation-duration: 0.2s; 
+animation-fill-mode: forwards; 
+}
+.thinner{
+ 
+animation-name: thin; 
+ animation-delay: 0s;
+animation-duration: 0.2s; 
+animation-fill-mode: forwards; 
 }
 }
 </style>
