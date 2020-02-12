@@ -309,6 +309,15 @@ animation-fill-mode: forwards;
    from { width: 30vw;} 
  to { width: 0vw; }
 }
+@media screen and (max-width: 1066px)
+{
+    #my-menu a.nomore{
+    display: none; 
+  }
+  .fixmenu a.nomore{
+    display: none;
+  }
+}
 @media screen and (max-width: 686px)
 {
 @-webkit-keyframes widener{
@@ -350,12 +359,7 @@ animation-fill-mode: forwards;
    from  {display: none; width: 0vw; }
  to {display: flex; width: 30vw;}
 }
-  #my-menu a.nomore{
-    display: none; 
-  }
-  .fixmenu a.nomore{
-    display: none;
-  }
+
   @-webkit-keyframes thin{
    from {display: flex; width: 30vw;} 
  to { width: 0vw; }
