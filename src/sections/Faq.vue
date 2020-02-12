@@ -126,12 +126,33 @@ p {
   margin: 1vw;
 }
 @media screen and (max-width: 1000px) {
+  #faq{
+    display: flex;
+  flex-flow: column nowrap;
+ 
+   width: 80vw;
+  align-content: center;
+  justify-content: center;
+ 
+  }
   .circlebox {
     margin: 2vw;
+    margin-left: 20vw; 
+    text-align: left;
+  padding-bottom: 0; 
+  margin-bottom: 0; 
+  justify-content: center;
+  background: rgb(246, 255, 123);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
   }
   p {
+    font-size: 3.3vw;
     margin: 2vw;
-    width: 30vw;
+    width: 50vw;
   }
 }
 .reveal {

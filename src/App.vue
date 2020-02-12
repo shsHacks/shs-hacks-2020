@@ -9,21 +9,21 @@
   <div id = "my-menu">
       
       <a id = "widen"></a>
-      <a href="#AboutHackathonLink" class ="nomore">About shsHacks</a>
+      <a href="#AboutHackathonLink" class ="nomore">About</a>
       <a href="#Location" >Location</a>
       <a href="#Schedule" >Schedule</a>
       <a href="#Register">Register</a>
       <a href = "#sponsor" class ="nomore"> Sponsors</a>
-       <a href = "#Contact" class ="nomore"> Contact Us</a>
+       <a href = "#Contact" class ="nomore"> Contact</a>
   </div>
   <div id = "menu-overlay" class="fixmenu">
     <a class ="widen"></a>
-     <a href="#AboutHackathonLink">About shsHacks</a>
+     <a href="#AboutHackathonLink">About</a>
       <a href="#Location">Location</a>
       <a href="#Schedule">Schedule</a>
       <a href="#sponsor">Sponsors</a>
       <a href = "#AboutUs"> Meet the Team</a>
-       <a href = "#Contact"> Contact Us</a>
+       <a href = "#Contact"> Contact</a>
   </div>
     <div id = "theContent">
       <h1 id = "AboutHackathonLink" style = "text-decoration: underline;">About shsHacks</h1>

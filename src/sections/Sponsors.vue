@@ -29,17 +29,17 @@ export default {
                {
                    source: '../../sponsorlogos/imc.png',
              ref: 'https://www.imc.com/us/',
-             id: 3, 
+             id: 0, 
               size: 'big'
               },
                 {
                    source: '../../sponsorlogos/c2.png',
              ref: 'https://www.c2educate.com/',
-             id: 3, 
+             id: 1, 
               size: 'big'
               },
              {source: '../../sponsorlogos/DigitalOcean.png',
-         id: 0, 
+         id: 2, 
          size: 'medium',
         //  size: ()=> {
         //      if(!this.mobileVersion)
@@ -58,7 +58,7 @@ export default {
          ref: 'https://digitalocean.com/'}, 
          {source: 
          '../../sponsorlogos/1Password.png',
-         id: 1 ,
+         id: 3 ,
          size: 'medium',
         //  size: function() {
         //      if(!this.mobileVersion)
@@ -77,34 +77,41 @@ export default {
          {
              source: '../../sponsorlogos/BCDV.png', 
              ref: 'https://www.bcdvideo.com/', 
-             id: 2, 
+             id: 4, 
               size: 'medium'
          }, 
          {
              source: '../../sponsorlogos/github.png',
              ref: 'https://github.com/',
-             id: 3, 
+             id: 5, 
               size: 'supersmall'
               }, 
                {
              source: '../../sponsorlogos/stickermule.png',
              ref: 'https://www.stickermule.com/',
-             id: 4, 
+             id: 6, 
               size: 'medium'
               }, 
                
               {
                    source: '../../sponsorlogos/wolfram.png',
              ref: 'https://www.wolfram.com/',
-             id: 3, 
+             id: 7, 
               size: 'medium'
               }, 
                 {
                    source: '../../sponsorlogos/Cloud.png',
              ref: 'https://cloudsploit.com/',
-             id: 3, 
+             id: 8, 
               size: 'medium'
+              }, 
+              {
+                  source: '../../sponsorlogos/water.png', 
+                  ref: 'https://boxedwaterisbetter.com/', 
+                  id: 9, 
+                  size: 'small'
               }
+
               
          ]
       };
