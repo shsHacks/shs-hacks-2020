@@ -7,7 +7,8 @@
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
   
   <div id = "my-menu">
-    
+      
+      <a id = "widen"></a>
       <a href="#AboutHackathonLink" class ="nomore">About shsHacks</a>
       <a href="#Location" >Location</a>
       <a href="#Schedule" >Schedule</a>
@@ -16,6 +17,7 @@
        <a href = "#Contact" class ="nomore"> Contact Us</a>
   </div>
   <div id = "menu-overlay" class="fixmenu">
+    <a class ="widen"></a>
      <a href="#AboutHackathonLink">About shsHacks</a>
       <a href="#Location">Location</a>
       <a href="#Schedule">Schedule</a>
@@ -87,13 +89,28 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("menu-overlay").style.top = "0";
+   
   }
   
   else {
     document.getElementById("menu-overlay").style.top = "-140px";
   }
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+  {
+    if(  !document.getElementById("widen").classList.contains("wider")){
+    document.getElementById("widen").classList.add("wider");
+        document.getElementById("widen").classList.remove("thinner");}
+  }
+  else{
+    if(  !document.getElementById("widen").classList.contains("thinner")){
+    //alert(document.body.scrollTop);
+  
+    document.getElementById("widen").classList.add("thinner");}
+      document.getElementById("widen").classList.remove("wider");
+  }
   if(document.body.scrollTop>500 || document.documentElement.scrollTop>500)
   {
+    
 document.getElementById("menu-overlay").style.backgroundColor= "rgba(255,224,25,1)";}
 else 
 {
@@ -137,7 +154,7 @@ align-items: center;
   font-weight: normal; 
   display: flex; 
   justify-content: space-around;
-  flex-flow: row wrap; 
+  flex-flow: row nowrap; 
  z-index: 20; 
   background-color: transparent; /* Black background color */
   position: fixed; /* Make it stick/fixed */
@@ -164,6 +181,7 @@ box-shadow: 0px 3px 5px 0px black;
   transition: color 1s; 
 
 }
+
 
 .fixmenu a{
 
@@ -250,18 +268,75 @@ h1{
   font-size: 5vh; 
   font-weight: bold; 
 }
+
+#sponsor{
+  margin-top: 20vh; 
+}
+#widen{
+  display: none; 
+  width: 0vw; 
+}
+@-webkit-keyframes widener{
+   from  {display: none; width: 0vw; }
+ to {display: flex; width: 30vw;}
+}
+
+/* Standard syntax */
+@keyframes widener{
+   from  {display: none; width: 0vw; }
+ to {display: flex; width: 30vw;}
+}
+.wider{
+ 
+animation-name: widener; 
+ animation-delay: 0s;
+animation-duration: 0.7s; 
+animation-fill-mode: forwards; 
+}
+.thinner{
+ 
+animation-name: thin; 
+ animation-delay: 0s;
+animation-duration: 0.7s; 
+animation-fill-mode: forwards; 
+}
+@-webkit-keyframes thin{
+   from { width: 30vw;} 
+ to { width: 0vw; }
+}
+
+/* Standard syntax */
+@keyframes thin{
+   from { width: 30vw;} 
+ to { width: 0vw; }
+}
 @media screen and (max-width: 686px)
 {
+@-webkit-keyframes widener{
+   from  {display: none; width: 0vw; }
+ to {display: flex; width: 20vw;}
+}
 
+/* Standard syntax */
+@keyframes widener{
+   from  {display: none; width: 0vw; }
+ to {display: flex; width: 20vw;}
+}
   #my-menu a.nomore{
     display: none; 
   }
   .fixmenu a.nomore{
     display: none;
   }
-}
-#sponsor{
-  margin-top: 20vh; 
+  @-webkit-keyframes thin{
+   from {display: flex; width: 20vw;} 
+ to { width: 0vw; }
 }
 
+/* Standard syntax */
+@keyframes thin{
+   from {display: flex; width: 20vw;} 
+ to { width: 0vw; }
+}
+}
 </style>
