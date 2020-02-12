@@ -309,7 +309,7 @@ animation-fill-mode: forwards;
    from { width: 30vw;} 
  to { width: 0vw; }
 }
-@media screen and (max-width: 1066px)
+@media screen and (max-width: 770px)
 {
     #my-menu a.nomore{
     display: none; 
