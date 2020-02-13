@@ -8,9 +8,9 @@
         { "start": "2:00PM",  "text": "Snacks","iam": 3 },
         { "start": "2:30PM", "end": "3:30PM", "text": "Web Dev Workshop","iam": 4},
         { "start": "4:30PM",  "text": "Dinner #1","iam": 5 },
-        { "start": "6:00PM", "end": "7:00PM", "text": "Game Dev Workshop", "iam": 6},
+        { "start": "6:00PM", "end": "7:00PM", "text": "Python Workshop", "iam": 6},
         { "start": "9:30PM",  "text": "Dinner #2","iam": 7 }, 
-        { "start": "9:30PM", "text": "Just Dance/Smash Brawls Competition","iam": 8 }, 
+        { "start": "9:30PM", "text": "Just Dance/Smash Ultimate Competition","iam": 8 }, 
         { "start": "11:00PM",  "text": "Movie/Mario Kart Competition","iam": 9 }
       
       ]
