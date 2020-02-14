@@ -110,6 +110,12 @@ export default {
                   ref: 'https://boxedwaterisbetter.com/', 
                   id: 9, 
                   size: 'small'
+              }, 
+              {
+                  source: '../../sponsorlogos/codeninja.png', 
+                  ref: 'https://www.codeninjas.com/', 
+                  id: 10, 
+                  size: 'medium'
               }
 
               
