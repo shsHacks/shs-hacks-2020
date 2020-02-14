@@ -3,7 +3,7 @@
     <div>
       <div id="right">
       
-        <img v-bind:src="image" id="slideshow"/>
+        <img v-bind:src="image" id="slideshow" :class="fader"/>
      
         <a
           href="https://drive.google.com/drive/folders/1-EZcs_Zz4tR8yeesqDO_MdkRvBeOaltM"
@@ -46,7 +46,7 @@ export default {
     var source = 2;
     const changeSlide = () => {
 
-   
+      
       this.image = sources[source];
           
       source += 1;

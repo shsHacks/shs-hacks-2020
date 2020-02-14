@@ -7,7 +7,7 @@
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
   
   <div id = "my-menu">
-      
+  <!--    <img id = "logoicon" src = "./assets/navlogo.png" ;/>-->
       <a id = "widen"></a>
       <a href="#AboutHackathonLink" class ="nomore">About</a>
       <a href="#Location" >Location</a>
@@ -18,12 +18,12 @@
   </div>
   <div id = "menu-overlay" class="fixmenu">
     <a class ="widen"></a>
-     <a href="#AboutHackathonLink">About</a>
-      <a href="#Location">Location</a>
+     <a href="#AboutHackathonLink" class ="nomore">About</a>
+      <a href="#Location" >Location</a>
       <a href="#Schedule">Schedule</a>
       <a href="#sponsor">Sponsors</a>
-      <a href = "#AboutUs"> Meet the Team</a>
-       <a href = "#Contact"> Contact</a>
+      <a href = "#AboutUs" class ="nomore"> Meet the Team</a>
+       <a href = "#Contact" class ="nomore"> Contact</a>
   </div>
     <div id = "theContent">
       <h1 id = "AboutHackathonLink" style = "text-decoration: underline;">About shsHacks</h1>
@@ -221,6 +221,11 @@ box-shadow: 0px 3px 5px 0px black;
 #Contact{
   height: auto; 
   margin-bottom: 0; 
+}
+#logoicon{
+ display: none; 
+  height: 7vh; 
+   width: auto; 
 }
 
 @font-face {
