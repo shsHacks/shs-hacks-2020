@@ -7,7 +7,7 @@
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
   
   <div id = "my-menu">
-  <!--    <img id = "logoicon" src = "./assets/navlogo.png" ;/>-->
+     <a href="/" id="menu-logo"><img :src="navlogo" /></a>
       <a id = "widen"></a>
       <a href="#AboutHackathonLink" class ="nomore">About</a>
       <a href="#Location" >Location</a>
@@ -22,8 +22,8 @@
       <a href="#Location" >Location</a>
       <a href="#Schedule">Schedule</a>
       <a href="#sponsor">Sponsors</a>
-      <a href = "#AboutUs" class ="nomore"> Meet the Team</a>
-       <a href = "#Contact" class ="nomore"> Contact</a>
+      <a href="#AboutUs" class ="nomore"> Meet the Team</a>
+      <a href="#Contact" class ="nomore"> Contact</a>
   </div>
     <div id = "theContent">
       <h1 id = "AboutHackathonLink" style = "text-decoration: underline;">About shsHacks</h1>
@@ -57,6 +57,7 @@ import Contact from '@/sections/Contact.vue';
 import abouthackathon from '@/sections/AboutHackathon.vue';
 import faq from '@/sections/Faq.vue'; 
 import register from '@/sections/Register.vue';
+import navlogo from '@/assets/navlogo.png';
 export default {
 
   data() {
@@ -66,7 +67,8 @@ export default {
       menuHeight: 0,
       primaryColor: '#275d38',
       secondaryColor: '#c99700',
-      colors
+      colors,
+      navlogo,
     }},
   name: 'app',
   components: {
@@ -98,6 +100,8 @@ function scrollFunction() {
     if(  !document.getElementById("widen").classList.contains("wider")){
     document.getElementById("widen").classList.add("wider");
         document.getElementById("widen").classList.remove("thinner");}
+
+    document.getElementById('menu-logo').classList.add('shift');
   }
   else{
     if(  !document.getElementById("widen").classList.contains("thinner")){
@@ -105,6 +109,9 @@ function scrollFunction() {
   
     document.getElementById("widen").classList.add("thinner");}
       document.getElementById("widen").classList.remove("wider");
+
+    document.getElementById('menu-logo').classList.remove('shift');
+    
   }
   if(document.body.scrollTop>500 || document.documentElement.scrollTop>500)
   {
@@ -196,7 +203,7 @@ box-shadow: 0px 3px 5px 0px black;
 
 /* Style the navbar links */
 #my-menu a {
-  font-size: 3vh; 
+  font-size: 3vh;
   display: block;
   color: #176F1A;
   text-align: center;
@@ -208,8 +215,26 @@ box-shadow: 0px 3px 5px 0px black;
 #my-menu a:hover {
   color: #03ff39;
 }
+
+#my-menu #menu-logo {
+  height: 55%;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  transform: translateX(-220px);
+  transition: transform .6s;
+}
+
+#my-menu #menu-logo.shift {
+  transform: translateX(0);
+}
+
+#my-menu #menu-logo img {
+  height: 100%;
+}
+
 .centerme{
-  position: relative; 
+  position: relative;
   top: 50%; 
   left: 50%; 
    transform: translate(-50%, -50%);
