@@ -86,12 +86,7 @@ export default {
              id: 5, 
               size: 'supersmall'
               }, 
-               {
-             source: '../../sponsorlogos/stickermule.png',
-             ref: 'https://www.stickermule.com/',
-             id: 6, 
-              size: 'medium'
-              }, 
+               
                
               {
                    source: '../../sponsorlogos/wolfram.png',
