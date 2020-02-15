@@ -3,7 +3,7 @@
       "date": "2/15/2020",
       "events": [
         { "start": "11:00AM", "text": "Arrival and Check-in" , "iam": 1},
-        { "start": "12:00PM", "end": "1:00PM", "text": "Opening Ceremony" , "iam": 2},
+        { "start": "12:20PM", "end": "1:00PM", "text": "Opening Ceremony" , "iam": 2},
         { "start": "1:00PM", "text": "Hacking Commences" },
         { "start": "2:00PM",  "text": "Snacks","iam": 3 },
         { "start": "2:30PM", "end": "3:30PM", "text": "Web Dev Workshop","iam": 4},
