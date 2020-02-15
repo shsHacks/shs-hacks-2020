@@ -347,6 +347,10 @@ animation-fill-mode: forwards;
   .fixmenu a.nomore{
     display: none;
   }
+
+  #my-menu #menu-logo {
+    display: none;
+  }
 }
 @media screen and (max-width: 686px)
 {
